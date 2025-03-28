@@ -1,11 +1,12 @@
 from typing import List, Dict, Any, Optional
+import asyncio
+from functools import partial
+from ollama import Client
+
 from app.services.model_providers.base import BaseModelHandler
 from app.models.schemas import Message
 from app.config import settings
 from app.utils.logger import get_logger
-import ollama
-import asyncio
-from functools import partial
 
 logger = get_logger(__name__)
 
@@ -21,8 +22,8 @@ class OllamaModelHandler(BaseModelHandler):
         """
         self.host = host or settings.OLLAMA_HOST
         
-        # Configure Ollama client
-        ollama.set_host(self.host)
+        # Initialize Ollama client
+        self.client = Client(host=self.host)
         logger.info(f"Initialized Ollama model handler with host: {self.host}")
     
     def _convert_to_ollama_messages(self, messages: List[Message]) -> List[Dict[str, str]]:
@@ -49,7 +50,7 @@ class OllamaModelHandler(BaseModelHandler):
             response = await loop.run_in_executor(
                 None,
                 partial(
-                    ollama.chat,
+                    self.client.chat,
                     model=model,
                     messages=ollama_messages,
                     options={
@@ -68,8 +69,10 @@ class OllamaModelHandler(BaseModelHandler):
             
             return {
                 "content": content,
-                "usage": usage
+                "usage": usage,
+                "model": model,
+                "provider": "ollama"
             }
         except Exception as e:
-            logger.error(f"Error in Ollama model handler: {str(e)}")
+            logger.error(f"Error calling Ollama API: {str(e)}")
             raise

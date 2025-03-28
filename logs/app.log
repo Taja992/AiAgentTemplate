@@ -1,0 +1,21 @@
+2025-03-28 13:02:03 | WARNING | app.services.model_service:35 | Ollama handler could not be registered
+2025-03-28 13:02:03 | INFO | app.services.model_service:25 | ModelService initialized with handlers: []
+2025-03-28 13:07:02 | WARNING | app.services.model_service:35 | Ollama handler could not be registered
+2025-03-28 13:07:02 | INFO | app.services.model_service:25 | ModelService initialized with handlers: []
+2025-03-28 13:09:56 | WARNING | app.services.model_service:35 | Ollama handler could not be registered
+2025-03-28 13:09:56 | INFO | app.services.model_service:25 | ModelService initialized with handlers: []
+2025-03-28 13:10:51 | WARNING | app.services.model_service:35 | Ollama handler could not be registered
+2025-03-28 13:10:51 | INFO | app.services.model_service:25 | ModelService initialized with handlers: []
+2025-03-28 13:11:06 | INFO | app.services.agent_service:81 | Processing request with model: string
+2025-03-28 13:11:32 | INFO | app.services.agent_service:81 | Processing request with model: string
+2025-03-28 13:15:07 | WARNING | app.services.model_service:35 | Ollama handler could not be registered
+2025-03-28 13:15:07 | INFO | app.services.model_service:25 | ModelService initialized with handlers: []
+2025-03-28 13:15:18 | INFO | app.services.agent_service:81 | Processing request with model: string
+2025-03-28 13:15:54 | WARNING | app.services.model_service:35 | Ollama handler could not be registered
+2025-03-28 13:15:54 | INFO | app.services.model_service:25 | ModelService initialized with handlers: []
+2025-03-28 13:35:27 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-28 13:35:27 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-28 13:35:27 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-28 13:35:47 | INFO | app.services.agent_service:81 | Processing request with model: string
+2025-03-28 13:35:49 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "string" not found, try pulling it first (status code: 404)
+2025-03-28 13:35:49 | ERROR | app.services.model_service:120 | Error generating response with model string: model "string" not found, try pulling it first (status code: 404)

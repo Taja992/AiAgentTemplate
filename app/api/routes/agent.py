@@ -16,7 +16,7 @@ async def chat(request: AgentRequest, agent_service: AgentService = Depends(get_
     """
     try:
         response = await agent_service.process_request(
-            message=request.messages,
+            messages=request.messages,
             model=request.model,
             temperature=request.temperature,
             max_tokens=request.max_tokens,
