@@ -19,3 +19,31 @@
 2025-03-28 13:35:47 | INFO | app.services.agent_service:81 | Processing request with model: string
 2025-03-28 13:35:49 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "string" not found, try pulling it first (status code: 404)
 2025-03-28 13:35:49 | ERROR | app.services.model_service:120 | Error generating response with model string: model "string" not found, try pulling it first (status code: 404)
+2025-03-29 09:55:01 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 09:55:01 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 09:55:01 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:10:14 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 10:10:14 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 10:10:14 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:33:41 | INFO | app.services.agent_service:84 | Processing request with model: string
+2025-03-29 10:33:43 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "string" not found, try pulling it first (status code: 404)
+2025-03-29 10:33:43 | ERROR | app.services.model_service:120 | Error generating response with model string: model "string" not found, try pulling it first (status code: 404)
+2025-03-29 10:35:20 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-29 10:39:34 | INFO | app.services.agent_service:84 | Processing request with model: null
+2025-03-29 10:39:36 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "null" not found, try pulling it first (status code: 404)
+2025-03-29 10:39:36 | ERROR | app.services.model_service:120 | Error generating response with model null: model "null" not found, try pulling it first (status code: 404)
+2025-03-29 10:39:43 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-29 10:42:59 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 10:42:59 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 10:42:59 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:43:02 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 10:43:02 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 10:43:02 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:43:23 | INFO | app.services.agent_service:84 | Processing request with model: string
+2025-03-29 10:43:25 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "string" not found, try pulling it first (status code: 404)
+2025-03-29 10:43:25 | ERROR | app.services.model_service:120 | Error generating response with model string: model "string" not found, try pulling it first (status code: 404)
+2025-03-29 10:45:39 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 10:45:39 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 10:45:39 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:45:41 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-29 10:47:13 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b

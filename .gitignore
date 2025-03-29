@@ -31,6 +31,10 @@ wheels/
 .env
 .env.local
 
+# Logs
+logs/
+*.log
+
 # IDE specific files
 .idea/
 .vscode/

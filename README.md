@@ -58,3 +58,25 @@ graph TD
 - Consistent interface regardless of underlying model
 - Configurable settings for model parameters
 - Comprehensive logging
+
+### Intelligent Model Selection
+
+The Agent Service includes content-based model routing:
+
+- Code-related tasks → CodeLlama
+- Creative content → Mistral
+- Mathematical queries → Llama2
+- Translation tasks → DeepSeek-R1
+- General queries → Default model (configurable)
+
+### Supported Model Providers
+
+- **Ollama**: Local model deployment with support for:
+  - Llama2
+  - CodeLlama
+  - Mistral
+  - DeepSeek-R1
+  
+- **Future Providers**:
+  - Architecture prepared for LM Studio
+  - Support for additional cloud-based models

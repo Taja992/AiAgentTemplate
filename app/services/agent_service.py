@@ -49,6 +49,9 @@ class AgentService:
         
         if any(keyword in last_user_message for keyword in ["math", "calculate", "equation", "solve"]):
             return "ollama:llama2"  # Mathematical tasks
+        
+        if any(keyword in last_user_message for keyword in ["translate", "language", "translation", "interpret"]):
+            return "ollama:deepseek-r1:7b"  # Human Language Translation tasks
     
         # Default model for general queries
         return settings.DEFAULT_MODEL

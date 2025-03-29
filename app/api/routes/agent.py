@@ -15,9 +15,12 @@ async def chat(request: AgentRequest, agent_service: AgentService = Depends(get_
     without changing the API contract
     """
     try:
+        # Swagger automatically makes the model "String".. this is to prevent that
+        model = None if request.model == "string" else request.model
+        
         response = await agent_service.process_request(
             messages=request.messages,
-            model=request.model,
+            model=model,
             temperature=request.temperature,
             max_tokens=request.max_tokens,
             **request.additional_params
