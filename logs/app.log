@@ -47,3 +47,53 @@
 2025-03-29 10:45:39 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
 2025-03-29 10:45:41 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
 2025-03-29 10:47:13 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-29 10:54:31 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 10:54:31 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 10:54:31 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:54:38 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1
+2025-03-29 10:54:41 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "deepseek-r1" not found, try pulling it first (status code: 404)
+2025-03-29 10:54:41 | ERROR | app.services.model_service:120 | Error generating response with model ollama:deepseek-r1: model "deepseek-r1" not found, try pulling it first (status code: 404)
+2025-03-29 10:56:46 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 10:56:46 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 10:56:46 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 10:56:47 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-29 10:57:50 | INFO | app.services.agent_service:84 | Processing request with model: ollama:mistral
+2025-03-29 10:58:22 | INFO | app.services.agent_service:84 | Processing request with model: ollama:codellama
+2025-03-29 11:06:46 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 11:06:46 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 11:06:46 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 11:07:16 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 11:07:16 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 11:07:16 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:16:12 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:16:12 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:16:12 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:16:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:16:13 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:16:13 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:16:31 | ERROR | app.api.routes.health:46 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:17:14 | ERROR | app.api.routes.health:46 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:17:15 | ERROR | app.api.routes.health:46 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:17:16 | ERROR | app.api.routes.health:46 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:17:21 | ERROR | app.api.routes.health:46 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:17:29 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:17:29 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:17:29 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:17:29 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:17:29 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:17:29 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:17:33 | ERROR | app.api.routes.health:46 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:19:12 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:19:12 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:19:12 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:19:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:19:13 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:19:13 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:19:37 | ERROR | app.api.routes.health:47 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:19:41 | ERROR | app.api.routes.health:47 | Health check failed for model service: 'ModelService' object has no attribute 'providers'
+2025-03-29 18:21:48 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:21:48 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:21:48 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:23:49 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:23:49 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:23:49 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
