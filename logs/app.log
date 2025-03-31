@@ -97,3 +97,33 @@
 2025-03-29 18:23:49 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
 2025-03-29 18:23:49 | INFO | app.services.model_service:33 | Registered Ollama model handler
 2025-03-29 18:23:49 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:24:53 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:24:54 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:24:54 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:24:54 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-29 18:24:54 | INFO | app.services.model_service:33 | Registered Ollama model handler
+2025-03-29 18:24:54 | INFO | app.services.model_service:25 | ModelService initialized with handlers: ['ollama']
+2025-03-29 18:25:15 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 10:03:52 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 10:03:52 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 10:03:52 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 10:03:52 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 10:03:52 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 10:03:53 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 10:03:53 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 10:03:53 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 10:03:53 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 10:03:53 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 10:04:34 | INFO | app.services.agent_service:84 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 10:05:35 | INFO | app.services.agent_service:84 | Processing request with model: ollama:codellama
+2025-03-31 10:06:27 | INFO | app.services.agent_service:84 | Processing request with model: ollama:codellama
+2025-03-31 10:10:43 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 10:10:43 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 10:10:43 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 10:10:43 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 10:10:43 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 10:13:56 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 10:13:56 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 10:13:56 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 10:13:56 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 10:13:56 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']

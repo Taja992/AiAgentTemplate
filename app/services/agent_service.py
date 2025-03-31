@@ -40,9 +40,32 @@ class AgentService:
     
         last_user_message = user_messages[-1].content.lower()
     
-        # Simple rule-based model selection
-        if any(keyword in last_user_message for keyword in ["code", "program", "function", "class", "algorithm"]):
-            return "ollama:codellama"  # Code-related tasks
+        programming_languages = [
+            "python", "java", "javascript", "js", "typescript", "ts", "c++", "cpp", 
+            "c#", "csharp", "ruby", "go", "golang", "php", "rust", "swift", 
+            "kotlin", "scala", "r", "perl", "bash", "shell", "sql", "html", 
+            "css", "xml", "json"
+        ]
+    
+        code_related_terms = [
+            "code", "program", "function", "class", "algorithm", "method", 
+            "variable", "library", "framework", "api", "parameter", "argument",
+            "return", "compile", "execute", "runtime", "debug", "syntax",
+            "implementation", "coding", "developer", "development", "script",
+            "programming", "console", "terminal", "command", "loop", "array",
+            "string", "integer", "boolean", "object", "instance", "interface",
+            "write a", "show me how", "example of", "implement", "create a"
+        ]
+    
+        # Check if the message mentions a programming language
+        if any(lang in last_user_message for lang in programming_languages):
+            logger.info(f"Detected programming language in query, routing to CodeLlama")
+            return "ollama:codellama"
+    
+        # Check for code-related terms
+        if any(term in last_user_message for term in code_related_terms):
+            logger.info(f"Detected code-related term in query, routing to CodeLlama")
+            return "ollama:codellama"
     
         if any(keyword in last_user_message for keyword in ["creative", "story", "imagine", "art", "design"]):
             return "ollama:mistral"  # Creative tasks

@@ -24,9 +24,16 @@ class CodeLlamaChain(BaseChain):
             **kwargs
     ) -> Dict[str, Any]:
         # Prompt template to follow
-        system_message = """You are a programming assistant that ONLY provides code examples, explanations of programming concepts, 
-        or direct answers to technical questions. If asked about non-programming topics, politely explain that 
-        you can only assist with programming-related queries."""
+        system_message = """You are a professional programming assistant specializing in:
+        
+        1. Providing clear, efficient code examples
+        2. Explaining programming concepts and algorithms
+        3. Debugging and fixing code problems
+        4. Suggesting best practices for software development
+        
+        Focus exclusively on programming-related topics. If asked about non-programming subjects,
+        politely redirect to programming assistance. Prioritize clarity, correctness, and 
+        educational value in your responses."""
 
         prompt = ChatPromptTemplate.from_messages([
             ("system", system_message),
@@ -62,7 +69,7 @@ class CodeLlamaChain(BaseChain):
             )
 
             return {
-                "content": response,
+                "content": response["text"] if isinstance(response, dict) and "text" in response else response,
                 "model": model,
                 "usage": {}
             }
