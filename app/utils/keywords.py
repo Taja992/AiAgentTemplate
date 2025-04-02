@@ -4,9 +4,9 @@ Keyword collections used for model routing and task identification.
 
 # Programming languages
 PROGRAMMING_LANGUAGES = [
-    "python", "java", "javascript", "js", "typescript", "ts", "c++", "cpp", 
-    "c#", "csharp", "ruby", "go", "golang", "php", "rust", "swift", 
-    "kotlin", "scala", "r", "perl", "bash", "shell", "sql", "html", 
+    "python", "java", "javascript", "js", "typescript", "c++", "cpp", 
+    "c#", "csharp", "golang", "php",
+    "kotlin", "scala", "perl", "sql", "html", 
     "css", "xml", "json"
 ]
 

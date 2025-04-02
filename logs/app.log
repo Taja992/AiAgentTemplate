@@ -388,3 +388,87 @@ ValueError: "MongoDBMemory" object has no field "store"
 2025-03-31 15:42:53 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
 2025-03-31 15:43:23 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
 2025-03-31 15:43:25 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-04-02 14:13:10 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:13:10 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:13:10 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:13:10 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:13:10 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:13:12 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:13:12 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:13:12 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:13:12 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:13:12 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:13:32 | INFO | app.services.agent_service:92 | Processing request with model: ollama:deepseek-r1:7b
+2025-04-02 14:13:32 | INFO | app.services.agent_service:109 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:13:32 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='User', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-02 14:13:32 | ERROR | app.services.model_service:173 | Error generating response with model ollama:deepseek-r1:7b: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='User', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-02 14:13:36 | INFO | app.services.agent_service:92 | Processing request with model: ollama:deepseek-r1:7b
+2025-04-02 14:13:36 | INFO | app.services.agent_service:109 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:14:06 | INFO | app.services.agent_service:49 | Detected programming language in query, routing to code model
+2025-04-02 14:14:06 | INFO | app.services.agent_service:92 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:14:06 | INFO | app.services.agent_service:109 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:14:08 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "codellama:7b" not found, try pulling it first (status code: 404)
+2025-04-02 14:14:08 | ERROR | app.services.model_service:173 | Error generating response with model ollama:codellama:7b: model "codellama:7b" not found, try pulling it first (status code: 404)
+2025-04-02 14:14:58 | INFO | app.services.agent_service:49 | Detected programming language in query, routing to code model
+2025-04-02 14:14:58 | INFO | app.services.agent_service:92 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:14:58 | INFO | app.services.agent_service:109 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:15:53 | INFO | app.services.agent_service:49 | Detected programming language in query, routing to code model
+2025-04-02 14:15:53 | INFO | app.services.agent_service:92 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:15:53 | INFO | app.services.agent_service:109 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:16:26 | INFO | app.services.agent_service:49 | Detected programming language in query, routing to code model
+2025-04-02 14:16:26 | INFO | app.services.agent_service:92 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:16:26 | INFO | app.services.agent_service:109 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:17:24 | INFO | app.services.agent_service:49 | Detected programming language in query, routing to code model
+2025-04-02 14:17:24 | INFO | app.services.agent_service:92 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:17:24 | INFO | app.services.agent_service:109 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:18:02 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:18:02 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:18:02 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:18:02 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:18:02 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:18:04 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:18:04 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:18:04 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:18:04 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:18:04 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:18:10 | INFO | app.services.agent_service:49 | Detected programming language in query, routing to code model
+2025-04-02 14:18:10 | INFO | app.services.agent_service:92 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:18:10 | INFO | app.services.agent_service:109 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:26:29 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:26:29 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:26:29 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:26:29 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:26:29 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:26:41 | INFO | app.services.agent_service:50 | Detected code keywords: ['r'], routing to code model
+2025-04-02 14:26:41 | INFO | app.services.agent_service:93 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:26:41 | INFO | app.services.agent_service:110 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:29:45 | INFO | app.services.agent_service:50 | Detected code keywords: ['r'], routing to code model
+2025-04-02 14:29:45 | INFO | app.services.agent_service:93 | Processing request with model: ollama:codellama:7b
+2025-04-02 14:29:45 | INFO | app.services.agent_service:110 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:29:49 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:29:49 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:29:49 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:29:49 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:29:49 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:29:53 | INFO | app.services.agent_service:62 | Detected translation task, routing to translation model
+2025-04-02 14:29:53 | INFO | app.services.agent_service:93 | Processing request with model: ollama:lauchacarro/qwen2.5-translator:7b
+2025-04-02 14:29:53 | INFO | app.services.agent_service:110 | Using task type: TRANSLATION, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:29:55 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: model "lauchacarro/qwen2.5-translator:7b" not found, try pulling it first (status code: 404)
+2025-04-02 14:29:55 | ERROR | app.services.model_service:173 | Error generating response with model ollama:lauchacarro/qwen2.5-translator:7b: model "lauchacarro/qwen2.5-translator:7b" not found, try pulling it first (status code: 404)
+2025-04-02 14:31:57 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-02 14:31:57 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-02 14:31:57 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-02 14:31:57 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-02 14:31:57 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-02 14:32:01 | INFO | app.services.agent_service:61 | Detected translation task, routing to translation model
+2025-04-02 14:32:01 | INFO | app.services.agent_service:92 | Processing request with model: ollama:lauchacarro/qwen2.5-translator
+2025-04-02 14:32:01 | INFO | app.services.agent_service:109 | Using task type: TRANSLATION, temperature: 0.7, max_tokens: 1000
+2025-04-02 14:33:36 | INFO | app.services.agent_service:53 | Detected creative task, routing to creative model
+2025-04-02 14:33:36 | INFO | app.services.agent_service:92 | Processing request with model: ollama:mistral
+2025-04-02 14:33:36 | INFO | app.services.agent_service:109 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000

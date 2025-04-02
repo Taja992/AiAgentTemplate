@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     DEFAULT_MAX_TOKENS: int = 1000
 
     #Special model settings
-    TRANSLATION_MODEL: str = "ollama:lauchacarro/qwen2.5-translator:7b"
+    TRANSLATION_MODEL: str = "ollama:lauchacarro/qwen2.5-translator"
     CODE_MODEL: str = "ollama:codellama:7b"
     CREATIVE_MODEL: str = "ollama:mistral"
     MATH_MODEL: str = "ollama:llama2:13b"
