@@ -68,8 +68,8 @@ class AgentService:
         self,
         messages: List[Message],
         model: Optional[str] = None,
-        temperature: float = 0.7,
-        max_tokens: int = 1000,
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
         **additional_params
         ) -> AgentResponse:
         """
@@ -90,6 +90,23 @@ class AgentService:
             model = await self.select_model_for_task(messages)
     
         logger.info(f"Processing request with model: {model}")
+
+        task_type = "DEFAULT"
+        if model == settings.CODE_MODEL:
+            task_type = "CODE"
+        elif model == settings.TRANSLATION_MODEL:
+            task_type = "TRANSLATION"
+        elif model == settings.CREATIVE_MODEL:
+            task_type = "CREATIVE"
+        elif model == settings.MATH_MODEL:
+            task_type = "MATH"
+
+        task_params = settings.TASK_PARAMS.get(task_type, settings.TASK_PARAMS["DEFAULT"])
+
+        temp = temperature if temperature is not None else task_params.get("temperature")
+        tokens = max_tokens if max_tokens is not None else task_params.get("max_tokens")
+
+        logger.info(f"Using task type: {task_type}, temperature: {temp}, max_tokens: {tokens}")
     
         # Use the model service to get a response
         model_response = await self.model_service.generate(

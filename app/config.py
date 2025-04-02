@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-from typing import Optional
+from typing import Optional, Dict, Any
 from dotenv import load_dotenv
 
 # Load Environment variables from .env file if needed
@@ -22,6 +22,30 @@ class Settings(BaseSettings):
     CODE_MODEL: str = "ollama:codellama:7b"
     CREATIVE_MODEL: str = "ollama:mistral"
     MATH_MODEL: str = "ollama:llama2:13b"
+
+    # Task specific parameters
+    TASK_PARAMS: Dict[str, Dict[str, Any]] = {
+        "DEFAULT": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+        },
+        "TRANSLATION": {
+            "temperature": 0.3,
+            "max_tokens": 1000
+        },
+        "CODE": {
+            "temperature": 0.2,
+            "max_tokens": 1500
+        },
+        "CREATIVE": {
+            "temperature": 0.8,
+            "max_tokens": 2000
+        },
+        "MATH": {
+            "temperature": 0.1,
+            "max_tokens": 800
+        }
+    }
 
 
     # Ollama Settings
