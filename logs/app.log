@@ -127,3 +127,264 @@
 2025-03-31 10:13:56 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
 2025-03-31 10:13:56 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
 2025-03-31 10:13:56 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 13:57:36 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 13:57:36 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 13:57:36 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 13:57:36 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 13:57:36 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 13:57:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 13:57:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 13:57:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 13:57:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 13:57:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 13:58:31 | INFO | app.services.agent_service:65 | Detected programming language in query, routing to CodeLlama
+2025-03-31 13:58:31 | INFO | app.services.agent_service:111 | Processing request with model: ollama:codellama
+2025-03-31 14:02:00 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:02:00 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:02:00 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:02:00 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:02:00 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:05:29 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:05:29 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:05:29 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:05:29 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:05:29 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:05:45 | INFO | app.services.agent_service:65 | Detected programming language in query, routing to CodeLlama
+2025-03-31 14:05:45 | INFO | app.services.agent_service:111 | Processing request with model: ollama:codellama
+2025-03-31 14:06:00 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 14:10:30 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:10:30 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:10:30 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:10:30 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:10:30 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:13:07 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:13:07 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:13:07 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:13:07 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:13:07 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:16:08 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:16:08 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:16:08 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:16:08 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:16:08 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:16:11 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 14:19:27 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:19:27 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:19:27 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:19:27 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:19:27 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:32:36 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:32:36 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:32:36 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:32:36 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:32:36 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 14:35:18 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 14:35:18 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 14:35:18 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 14:35:18 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 14:35:18 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:13:21 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:13:21 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:13:21 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:13:21 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:13:21 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:13:23 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:13:23 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:13:23 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:13:23 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:13:23 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:13:35 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:37 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:42 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:43 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:43 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:43 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:43 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:43 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:13:43 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:14:04 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:14:04 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:14:05 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:17:06 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:18:19 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:18:19 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:18:19 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:18:19 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:18:19 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:19:16 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:19:16 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:19:16 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:19:16 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:19:16 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:19:19 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:20:03 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:20:04 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:40 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:21:40 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:21:40 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:21:40 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:21:40 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:21:45 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:49 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:50 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:50 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:50 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:50 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:50 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:50 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:51 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:51 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:51 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:51 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:51 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:21:51 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:22:53 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:24:32 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:24:32 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:24:32 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:24:32 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:24:32 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:24:34 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:29:33 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:29:33 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:29:33 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:29:33 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:29:33 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:30:03 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:30:03 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:30:03 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:30:03 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:30:03 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:30:27 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:30:57 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:31:23 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:33:15 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:34:33 | INFO | app.api.dependencies:14 | MongoDB service initialized (not yet connected)
+2025-03-31 15:34:34 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:34:34 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:34:34 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:34:34 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:34:34 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:34:35 | INFO | app.api.dependencies:14 | MongoDB service initialized (not yet connected)
+2025-03-31 15:34:35 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:34:35 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:34:35 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:34:35 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:34:35 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:34:35 | INFO | app.services.mongodb_service:37 | Connected to MongoDB: ai_agent_memory.conversations
+2025-03-31 15:34:35 | INFO | app.main:23 | MongoDB connection verified during startup
+2025-03-31 15:34:56 | INFO | app.services.agent_service:116 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:34:56 | ERROR | app.services.mongodb_memory:40 | Error loading conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:34:56 | ERROR | app.services.mongodb_memory:53 | Error creating conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:34:56 | ERROR | app.services.agent_service:127 | Error initializing MongoDB memory: Failed to initialize MongoDB conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:35:57 | INFO | app.services.agent_service:69 | Detected programming language in query, routing to CodeLlama
+2025-03-31 15:35:57 | INFO | app.services.agent_service:116 | Processing request with model: ollama:codellama
+2025-03-31 15:35:57 | ERROR | app.services.mongodb_memory:40 | Error loading conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:35:57 | ERROR | app.services.mongodb_memory:53 | Error creating conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:35:57 | ERROR | app.services.agent_service:127 | Error initializing MongoDB memory: Failed to initialize MongoDB conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:36:23 | INFO | app.services.agent_service:69 | Detected programming language in query, routing to CodeLlama
+2025-03-31 15:36:23 | INFO | app.services.agent_service:116 | Processing request with model: ollama:codellama
+2025-03-31 15:36:23 | ERROR | app.services.mongodb_memory:40 | Error loading conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:36:23 | ERROR | app.services.mongodb_memory:53 | Error creating conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:36:23 | ERROR | app.services.agent_service:127 | Error initializing MongoDB memory: Failed to initialize MongoDB conversation: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-31 15:38:50 | INFO | app.services.mongodb_service:47 | Disconnected from MongoDB
+2025-03-31 15:38:50 | INFO | app.main:34 | MongoDB connection closed
+2025-03-31 15:38:52 | INFO | app.api.dependencies:14 | MongoDB service initialized (not yet connected)
+2025-03-31 15:38:52 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:38:52 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:38:52 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:38:52 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:38:52 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:38:52 | INFO | app.services.mongodb_service:37 | Connected to MongoDB: ai_agent_memory.conversations
+2025-03-31 15:38:52 | INFO | app.services.mongodb_service:37 | Connected to MongoDB: ai_agent_memory.conversations
+2025-03-31 15:38:52 | INFO | app.main:39 | MongoDB connection verified during startup
+2025-03-31 15:38:56 | INFO | app.services.agent_service:79 | Detected programming language in query, routing to CodeLlama
+2025-03-31 15:38:56 | INFO | app.services.agent_service:126 | Processing request with model: ollama:codellama
+2025-03-31 15:38:56 | WARNING | app.services.mongodb_service:82 | Conversation 114d8006-37db-40dd-8058-ae0b56906e85 not found in MongoDB
+2025-03-31 15:38:56 | INFO | app.services.mongodb_service:71 | Saved conversation 114d8006-37db-40dd-8058-ae0b56906e85 to MongoDB
+2025-03-31 15:38:56 | INFO | app.services.mongodb_memory:55 | Created new conversation: 114d8006-37db-40dd-8058-ae0b56906e85
+2025-03-31 15:38:56 | ERROR | app.services.agent_service:137 | Error initializing MongoDB memory: "MongoDBMemory" object has no field "store"
+2025-03-31 15:38:56 | ERROR | app.services.agent_service:138 | Traceback (most recent call last):
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\agent_service.py", line 132, in process_request
+    memory = MongoDBMemory(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\mongodb_memory.py", line 119, in __init__
+    self.store = MongoDBMemoryStore(
+    ^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\venv\Lib\site-packages\pydantic\main.py", line 925, in __setattr__
+    raise ValueError(f'"{self.__class__.__name__}" object has no field "{name}"')
+ValueError: "MongoDBMemory" object has no field "store"
+
+2025-03-31 15:39:30 | INFO | app.services.agent_service:79 | Detected programming language in query, routing to CodeLlama
+2025-03-31 15:39:30 | INFO | app.services.agent_service:126 | Processing request with model: ollama:codellama
+2025-03-31 15:39:30 | WARNING | app.services.mongodb_service:82 | Conversation 20ef8e12-2d05-4e22-89bc-a3ce364e6016 not found in MongoDB
+2025-03-31 15:39:30 | INFO | app.services.mongodb_service:71 | Saved conversation 20ef8e12-2d05-4e22-89bc-a3ce364e6016 to MongoDB
+2025-03-31 15:39:30 | INFO | app.services.mongodb_memory:55 | Created new conversation: 20ef8e12-2d05-4e22-89bc-a3ce364e6016
+2025-03-31 15:39:30 | ERROR | app.services.agent_service:137 | Error initializing MongoDB memory: "MongoDBMemory" object has no field "store"
+2025-03-31 15:39:30 | ERROR | app.services.agent_service:138 | Traceback (most recent call last):
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\agent_service.py", line 132, in process_request
+    memory = MongoDBMemory(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\mongodb_memory.py", line 119, in __init__
+    self.store = MongoDBMemoryStore(
+    ^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\venv\Lib\site-packages\pydantic\main.py", line 925, in __setattr__
+    raise ValueError(f'"{self.__class__.__name__}" object has no field "{name}"')
+ValueError: "MongoDBMemory" object has no field "store"
+
+2025-03-31 15:39:46 | INFO | app.services.agent_service:126 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:39:46 | WARNING | app.services.mongodb_service:82 | Conversation df7ed213-b81b-41bb-a3bb-20c81024c604 not found in MongoDB
+2025-03-31 15:39:46 | INFO | app.services.mongodb_service:71 | Saved conversation df7ed213-b81b-41bb-a3bb-20c81024c604 to MongoDB
+2025-03-31 15:39:46 | INFO | app.services.mongodb_memory:55 | Created new conversation: df7ed213-b81b-41bb-a3bb-20c81024c604
+2025-03-31 15:39:46 | ERROR | app.services.agent_service:137 | Error initializing MongoDB memory: "MongoDBMemory" object has no field "store"
+2025-03-31 15:39:46 | ERROR | app.services.agent_service:138 | Traceback (most recent call last):
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\agent_service.py", line 132, in process_request
+    memory = MongoDBMemory(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\mongodb_memory.py", line 119, in __init__
+    self.store = MongoDBMemoryStore(
+    ^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\venv\Lib\site-packages\pydantic\main.py", line 925, in __setattr__
+    raise ValueError(f'"{self.__class__.__name__}" object has no field "{name}"')
+ValueError: "MongoDBMemory" object has no field "store"
+
+2025-03-31 15:40:05 | INFO | app.services.agent_service:79 | Detected programming language in query, routing to CodeLlama
+2025-03-31 15:40:05 | INFO | app.services.agent_service:126 | Processing request with model: ollama:codellama
+2025-03-31 15:40:05 | WARNING | app.services.mongodb_service:82 | Conversation cb2bbebc-5dd5-445e-b0c3-b3a8660dcc1e not found in MongoDB
+2025-03-31 15:40:05 | INFO | app.services.mongodb_service:71 | Saved conversation cb2bbebc-5dd5-445e-b0c3-b3a8660dcc1e to MongoDB
+2025-03-31 15:40:05 | INFO | app.services.mongodb_memory:55 | Created new conversation: cb2bbebc-5dd5-445e-b0c3-b3a8660dcc1e
+2025-03-31 15:40:05 | ERROR | app.services.agent_service:137 | Error initializing MongoDB memory: "MongoDBMemory" object has no field "store"
+2025-03-31 15:40:05 | ERROR | app.services.agent_service:138 | Traceback (most recent call last):
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\agent_service.py", line 132, in process_request
+    memory = MongoDBMemory(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\app\services\mongodb_memory.py", line 119, in __init__
+    self.store = MongoDBMemoryStore(
+    ^^^^^^^^^^
+  File "C:\Users\Taja\Desktop\Programming\Projects\AIAgentTemplate\venv\Lib\site-packages\pydantic\main.py", line 925, in __setattr__
+    raise ValueError(f'"{self.__class__.__name__}" object has no field "{name}"')
+ValueError: "MongoDBMemory" object has no field "store"
+
+2025-03-31 15:40:32 | INFO | app.services.mongodb_service:47 | Disconnected from MongoDB
+2025-03-31 15:40:32 | INFO | app.main:54 | MongoDB connection closed
+2025-03-31 15:40:34 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:40:34 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:40:34 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:40:34 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:40:34 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:40:52 | INFO | app.services.agent_service:68 | Detected programming language in query, routing to CodeLlama
+2025-03-31 15:40:52 | INFO | app.services.agent_service:114 | Processing request with model: ollama:codellama
+2025-03-31 15:40:52 | INFO | app.services.mongodb_service:37 | Connected to MongoDB: ai_agent_memory.conversations
+2025-03-31 15:40:52 | WARNING | app.services.mongodb_service:79 | Conversation 3b5c2dec-95a8-4dce-bcef-ef3d97187471 not found in MongoDB
+2025-03-31 15:42:51 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:42:51 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:42:51 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:42:51 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:42:51 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:42:53 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-03-31 15:42:53 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-03-31 15:42:53 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-03-31 15:42:53 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-03-31 15:42:53 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-03-31 15:43:23 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b
+2025-03-31 15:43:25 | INFO | app.services.agent_service:111 | Processing request with model: ollama:deepseek-r1:7b

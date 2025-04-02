@@ -17,6 +17,12 @@ class Settings(BaseSettings):
     DEFAULT_TEMPERATURE: float = 0.7
     DEFAULT_MAX_TOKENS: int = 1000
 
+    #Special model settings
+    TRANSLATION_MODEL: str = "ollama:lauchacarro/qwen2.5-translator:7b"
+    CODE_MODEL: str = "ollama:codellama:7b"
+    CREATIVE_MODEL: str = "ollama:mistral"
+    MATH_MODEL: str = "ollama:llama2:13b"
+
 
     # Ollama Settings
     OLLAMA_HOST: str = "http://localhost:11434"

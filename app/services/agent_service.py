@@ -3,6 +3,8 @@ from app.models.schemas import Message, AgentResponse
 from app.services.model_service import ModelService
 from app.config import settings
 from app.utils.logger import get_logger
+from app.utils.keywords import (PROGRAMMING_LANGUAGES, CODE_RELATED_TERMS,
+                                 TRANSLATION_TERMS, MATH_TERMS, CREATIVE_TERMS)
 
 logger = get_logger(__name__)
 
@@ -40,41 +42,24 @@ class AgentService:
     
         last_user_message = user_messages[-1].content.lower()
     
-        programming_languages = [
-            "python", "java", "javascript", "js", "typescript", "ts", "c++", "cpp", 
-            "c#", "csharp", "ruby", "go", "golang", "php", "rust", "swift", 
-            "kotlin", "scala", "r", "perl", "bash", "shell", "sql", "html", 
-            "css", "xml", "json"
-        ]
-    
-        code_related_terms = [
-            "code", "program", "function", "class", "algorithm", "method", 
-            "variable", "library", "framework", "api", "parameter", "argument",
-            "return", "compile", "execute", "runtime", "debug", "syntax",
-            "implementation", "coding", "developer", "development", "script",
-            "programming", "console", "terminal", "command", "loop", "array",
-            "string", "integer", "boolean", "object", "instance", "interface",
-            "write a", "show me how", "example of", "implement", "create a"
-        ]
     
         # Check if the message mentions a programming language
-        if any(lang in last_user_message for lang in programming_languages):
-            logger.info(f"Detected programming language in query, routing to CodeLlama")
-            return "ollama:codellama"
+        code_keywords = PROGRAMMING_LANGUAGES + CODE_RELATED_TERMS
+        if any(keyword in last_user_message for keyword in code_keywords):
+            logger.info(f"Detected programming language in query, routing to code model")
+            return settings.CODE_MODEL
     
-        # Check for code-related terms
-        if any(term in last_user_message for term in code_related_terms):
-            logger.info(f"Detected code-related term in query, routing to CodeLlama")
-            return "ollama:codellama"
-    
-        if any(keyword in last_user_message for keyword in ["creative", "story", "imagine", "art", "design"]):
-            return "ollama:mistral"  # Creative tasks
+        if any(keyword in last_user_message for keyword in CREATIVE_TERMS):
+            logger.info(f"Detected creative task, routing to creative model")
+            return settings.CREATIVE_MODEL
         
-        if any(keyword in last_user_message for keyword in ["math", "calculate", "equation", "solve"]):
-            return "ollama:llama2"  # Mathematical tasks
+        if any(keyword in last_user_message for keyword in MATH_TERMS):
+            logger.info(f"Detected mathematical task, routing to math model")
+            return settings.MATH_MODEL
         
-        if any(keyword in last_user_message for keyword in ["translate", "language", "translation", "interpret"]):
-            return "ollama:deepseek-r1:7b"  # Human Language Translation tasks
+        if any(keyword in last_user_message for keyword in TRANSLATION_TERMS):
+            logger.info(f"Detected translation task, routing to translation model")
+            return settings.TRANSLATION_MODEL
     
         # Default model for general queries
         return settings.DEFAULT_MODEL

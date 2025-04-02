@@ -40,3 +40,4 @@ logs/
 .vscode/
 *.swp
 *.swo
+logs/app.log
