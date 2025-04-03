@@ -13,7 +13,8 @@ class Settings(BaseSettings):
     API_VERSION: str = "0.1.0"
 
     # Default model settings
-    DEFAULT_MODEL: str = "ollama:deepseek-r1:7b"
+    # DEFAULT_MODEL: str = "ollama:deepseek-r1:7b"
+    DEFAULT_MODEL: str = "ollama:gemma3:1b"
     DEFAULT_TEMPERATURE: float = 0.7
     DEFAULT_MAX_TOKENS: int = 1000
 

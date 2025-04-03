@@ -139,7 +139,7 @@ class ConversationBufferMemoryWrapper(BaseMemory):
             logger.debug(f"No buffer memory found for conversation {conversation_id}")
 
 
-    async def delete_message(self, message_id: str = "default") -> None:
+    async def delete_message(self, message_id: str, conversation_id: str = "default") -> None:
         """
         Delete a specific message from memory.
         

@@ -506,3 +506,42 @@ role
 2025-04-03 08:26:19 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
 2025-04-03 08:28:29 | INFO | app.services.agent_service:110 | Processing request with model: ollama:deepseek-r1:7b
 2025-04-03 08:28:29 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:43:24 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 08:43:24 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 08:43:24 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 08:43:24 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 08:43:24 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 08:43:24 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 08:43:24 | INFO | app.services.memory.mongo_memory:57 | Successfully connected to MongoDB:
+2025-04-03 08:43:24 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-03 08:43:24 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-03 08:43:25 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 08:43:25 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 08:43:25 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 08:43:25 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 08:43:25 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 08:43:25 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 08:43:25 | INFO | app.services.memory.mongo_memory:57 | Successfully connected to MongoDB:
+2025-04-03 08:43:25 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-03 08:43:25 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-03 08:43:46 | INFO | app.services.agent_service:110 | Processing request with model: ollama:gemma3:1b
+2025-04-03 08:43:46 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:44:20 | INFO | app.services.agent_service:110 | Processing request with model: ollama:gemma3:1b
+2025-04-03 08:44:20 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:46:35 | INFO | app.services.agent_service:110 | Processing request with model: ollama:gemma3:1b
+2025-04-03 08:46:35 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:46:56 | INFO | app.services.agent_service:110 | Processing request with model: ollama:gemma3:1b
+2025-04-03 08:46:56 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 09:00:07 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 09:00:07 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 09:00:07 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 09:00:07 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 09:00:07 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 09:00:07 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 09:00:07 | INFO | app.services.memory.mongo_memory:57 | Successfully connected to MongoDB:
+2025-04-03 09:00:07 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-03 09:00:07 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-03 09:00:33 | INFO | app.services.agent_service:119 | Processing request with model: ollama:gemma3:1b
+2025-04-03 09:00:33 | INFO | app.services.agent_service:136 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 09:00:54 | INFO | app.services.agent_service:119 | Processing request with model: ollama:gemma3:1b
+2025-04-03 09:00:54 | INFO | app.services.agent_service:136 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000

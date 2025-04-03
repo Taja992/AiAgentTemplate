@@ -102,6 +102,15 @@ class AgentService:
                     await self.memory_service.save_message(msg, conversation_id)
                     break
 
+        # Load prior conversation history
+        conversation_history = await self.memory_service.load_recent_messages(conversation_id)
+        # If we have history, prepend it to the current messages (except the last one)
+        if conversation_history and len(conversation_history) > 1:
+            # Remove the most recent message since it's already in 'messages'
+            conversation_history = conversation_history[:-1]
+            messages = conversation_history + messages
+            logger.debug(f"Loaded {len(conversation_history)} messages from memory for conversation {conversation_id}")
+
 
         # Auto-select model if none provided
         if model is None:
