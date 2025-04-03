@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+# Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
+
+description: "My eval"
+
+prompts:
+  - file://prompts/code.json
+  # - file://prompts/creative.json
+  # - file://prompts/default.json
+  # - file://prompts/math.json
+  # - file://prompts/translator.json
+  
+
+providers:
+  - id: https
+    config:
+      url: "http://localhost:8000/api/chat?skip_memory=true"
+      method: POST
+      headers:
+        Content-Type: application/json
+      body:
+        messages: {{messages}}
+        model: null
+        temperature: 0.7
+        max_tokens: 1000      
+      transformResponse: 'json.response'  

@@ -9,6 +9,7 @@ router = APIRouter(tags=["agents"])
 @router.post("/chat", response_model=AgentResponse)
 async def chat(
     request: AgentRequest,
+    skip_memory: bool = False,
     conversation_id: Optional[str] = "default",
     agent_service: AgentService = Depends(get_agent_service)):
     """
@@ -28,6 +29,7 @@ async def chat(
             temperature=request.temperature,
             max_tokens=request.max_tokens,
             conversation_id=conversation_id,
+            skip_memory=skip_memory,
             **request.additional_params
         )
         return response

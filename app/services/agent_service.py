@@ -76,8 +76,10 @@ class AgentService:
         temperature: Optional[float] = None,
         max_tokens: Optional[int] = None,
         conversation_id: str = "default",
+        skip_memory: bool = False,
         **additional_params
         ) -> AgentResponse:
+
         """
         Process a chat request, automatically selecting the best model if none specified.
     
@@ -92,9 +94,9 @@ class AgentService:
         Returns:
             AgentResponse with the model's response
         """
-
+        # Only use memory if not skipping
         # If we have memory service, save the latest user message to memory
-        if self.memory_service:
+        if self.memory_service and not skip_memory:
             # Find the latest user message
             for msg in reversed(messages):
                 if msg.role.lower() == "user":
@@ -102,14 +104,15 @@ class AgentService:
                     await self.memory_service.save_message(msg, conversation_id)
                     break
 
-        # Load prior conversation history
-        conversation_history = await self.memory_service.load_recent_messages(conversation_id)
-        # If we have history, prepend it to the current messages (except the last one)
-        if conversation_history and len(conversation_history) > 1:
-            # Remove the most recent message since it's already in 'messages'
-            conversation_history = conversation_history[:-1]
-            messages = conversation_history + messages
-            logger.debug(f"Loaded {len(conversation_history)} messages from memory for conversation {conversation_id}")
+        if self.memory_service and not skip_memory:
+            # Load prior conversation history
+            conversation_history = await self.memory_service.load_recent_messages(conversation_id)
+            # If we have history, prepend it to the current messages (except the last one)
+            if conversation_history and len(conversation_history) > 1:
+                # Remove the most recent message since it's already in 'messages'
+                conversation_history = conversation_history[:-1]
+                messages = conversation_history + messages
+                logger.debug(f"Loaded {len(conversation_history)} messages from memory for conversation {conversation_id}")
 
 
         # Auto-select model if none provided
@@ -152,7 +155,7 @@ class AgentService:
         )
 
         # if we have memory service, save assistant's response
-        if self.memory_service:
+        if self.memory_service and not skip_memory:
             assistant_message = Message(role="assistant", content=response.response)
             logger.debug(f"Saving assistant response to memory for conversation {conversation_id}")
             await self.memory_service.save_message(assistant_message, conversation_id)
