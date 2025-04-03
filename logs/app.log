@@ -757,3 +757,145 @@ role
 2025-04-03 18:10:28 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eeb2ef1e47c68f31209381, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
 2025-04-03 18:10:28 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eeb2ef1e47c68f31209381, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
 2025-04-03 18:10:28 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 19:28:58 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 19:28:58 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 19:28:58 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 19:28:58 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 19:28:58 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 19:28:58 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 19:29:03 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eec55ab146f30c639dca07, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 19:29:03 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eec55ab146f30c639dca07, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 19:29:03 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 19:29:04 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 19:29:04 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 19:29:04 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 19:29:04 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 19:29:04 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 19:29:04 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 19:29:09 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eec56002a7087d856e027a, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 19:29:09 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eec56002a7087d856e027a, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 19:29:09 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 19:32:09 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 19:32:09 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 19:32:09 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='string', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-03 19:32:09 | ERROR | app.services.model_service:173 | Error generating response with model ollama:gemma3:1b: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='string', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-03 19:32:22 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 19:32:22 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 19:41:23 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 19:41:23 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 19:50:20 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 19:50:20 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 19:55:18 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 19:55:18 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:00:23 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:00:23 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:03:20 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:03:20 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:17:50 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:17:50 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:24:29 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:24:29 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:24:29 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='string', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-03 20:24:29 | ERROR | app.services.model_service:173 | Error generating response with model ollama:gemma3:1b: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='string', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-03 20:24:42 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:24:42 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:24:42 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='string', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-03 20:24:42 | ERROR | app.services.model_service:173 | Error generating response with model ollama:gemma3:1b: 1 validation error for Message
+role
+  Input should be 'user', 'assistant', 'system' or 'tool' [type=literal_error, input_value='string', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2025-04-03 20:25:04 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:25:04 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:26:55 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 20:26:55 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 20:26:55 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 20:26:55 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 20:26:55 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 20:26:55 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 20:27:00 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed2ef382403d98c395ce3, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:27:00 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed2ef382403d98c395ce3, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:27:00 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 20:27:02 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 20:27:02 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 20:27:02 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 20:27:02 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 20:27:02 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 20:27:02 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 20:27:07 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed2f6f40227be333a8c6d, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:27:07 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed2f6f40227be333a8c6d, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:27:07 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 20:27:22 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:27:22 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:35:31 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:35:31 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:51:26 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 20:51:26 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 20:51:26 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 20:51:26 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 20:51:26 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 20:51:26 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 20:51:31 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8aeba36e9a9008a4c28, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:51:31 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8aeba36e9a9008a4c28, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:51:31 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 20:51:33 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 20:51:33 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 20:51:33 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 20:51:33 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 20:51:33 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 20:51:33 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 20:51:38 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8b52eeb575882490dbf, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:51:38 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8b52eeb575882490dbf, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:51:38 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 20:51:46 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-03 20:51:46 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 20:52:20 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 20:52:20 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 20:52:20 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 20:52:20 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 20:52:20 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 20:52:20 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 20:52:26 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8e4734f1930dccab4dc, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:52:26 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8e4734f1930dccab4dc, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:52:26 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 20:52:27 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 20:52:27 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 20:52:27 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 20:52:27 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 20:52:27 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 20:52:27 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 20:52:32 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8eb3a3e72afc1c8fe5e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:52:32 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eed8eb3a3e72afc1c8fe5e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 20:52:32 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 21:20:40 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 21:20:40 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 21:20:40 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 21:20:40 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 21:20:40 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 21:20:40 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 21:20:45 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eedf885bad010ed786cb62, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 21:20:45 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eedf885bad010ed786cb62, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 21:20:45 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 21:20:46 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 21:20:46 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 21:20:46 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 21:20:46 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 21:20:46 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 21:20:46 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 21:20:51 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eedf8e6075cbe65a05bd0c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 21:20:51 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eedf8e6075cbe65a05bd0c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 21:20:51 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only

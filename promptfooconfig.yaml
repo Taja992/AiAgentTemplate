@@ -6,22 +6,19 @@ description: "My eval"
 
 prompts:
   - file://prompts/code.json
+  - file://prompts/test.json
   # - file://prompts/creative.json
   # - file://prompts/default.json
   # - file://prompts/math.json
   # - file://prompts/translator.json
-  
 
 providers:
   - id: https
     config:
-      url: "http://localhost:8000/api/chat?skip_memory=true"
+      url: "http://localhost:8000/api/chat?skip_memory=true&conversation_id=promptfoo"
       method: POST
       headers:
+        'accept': application/json
         Content-Type: application/json
-      body:
-        messages: {{messages}}
-        model: null
-        temperature: 0.7
-        max_tokens: 1000      
-      transformResponse: 'json.response'  
+      body: '{{ prompt }}'
+      transformResponse: 'json.response'
