@@ -2,11 +2,15 @@ from fastapi import APIRouter, Depends, HTTPException
 from app.models.schemas import AgentRequest, AgentResponse
 from app.services.agent_service import AgentService
 from app.api.dependencies import get_agent_service
+from typing import Optional
 
 router = APIRouter(tags=["agents"])
 
 @router.post("/chat", response_model=AgentResponse)
-async def chat(request: AgentRequest, agent_service: AgentService = Depends(get_agent_service)):
+async def chat(
+    request: AgentRequest,
+    conversation_id: Optional[str] = "default",
+    agent_service: AgentService = Depends(get_agent_service)):
     """
     Chat with an AI agent using various models.
     
@@ -23,6 +27,7 @@ async def chat(request: AgentRequest, agent_service: AgentService = Depends(get_
             model=model,
             temperature=request.temperature,
             max_tokens=request.max_tokens,
+            conversation_id=conversation_id,
             **request.additional_params
         )
         return response

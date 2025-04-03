@@ -4,7 +4,7 @@ from functools import partial
 
 from langchain.chains import LLMChain
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.chat_models import ChatOllama
+from langchain_community.chat_models import ChatOllama
 
 from app.services.chains.base import BaseChain
 from app.models.schemas import Message

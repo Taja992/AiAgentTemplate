@@ -1,6 +1,10 @@
 from typing import List, Dict, Any, Optional
 from app.models.schemas import Message, AgentResponse
 from app.services.model_service import ModelService
+from app.services.memory_service import MemoryService
+from langchain.chains import ConversationChain
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_community.chat_models import ChatOllama
 from app.config import settings
 from app.utils.logger import get_logger
 from app.utils.keywords import (PROGRAMMING_LANGUAGES, CODE_RELATED_TERMS,
@@ -16,7 +20,7 @@ class AgentService:
     providing a consistent interface regardless of the underlying model provider.
     """
     
-    def __init__(self, model_service: ModelService):
+    def __init__(self, model_service: ModelService, memory_service: MemoryService = None):
         """
         Initialize the agent service with a model service.
         
@@ -24,6 +28,7 @@ class AgentService:
             model_service: Service that handles interactions with different LLM providers
         """
         self.model_service = model_service
+        self.memory_service = memory_service
 
     async def select_model_for_task(self, messages: List[Message]) -> str:
         """
@@ -70,6 +75,7 @@ class AgentService:
         model: Optional[str] = None,
         temperature: Optional[float] = None,
         max_tokens: Optional[int] = None,
+        conversation_id: str = "default",
         **additional_params
         ) -> AgentResponse:
         """
@@ -80,11 +86,23 @@ class AgentService:
             model: Name of the model to use (if None, will be auto-selected)
             temperature: Creativity parameter (0-1)
             max_tokens: Maximum number of tokens to generate
+            conversation_id: Unique ID for convo
             additional_params: Any additional model-specific parameters
         
         Returns:
             AgentResponse with the model's response
         """
+
+        # If we have memory service, save the latest user message to memory
+        if self.memory_service:
+            # Find the latest user message
+            for msg in reversed(messages):
+                if msg.role.lower() == "user":
+                    logger.debug(f"Saving user message to conversation {conversation_id}")
+                    await self.memory_service.save_message(msg, conversation_id)
+                    break
+
+
         # Auto-select model if none provided
         if model is None:
             model = await self.select_model_for_task(messages)
@@ -118,8 +136,82 @@ class AgentService:
         )
     
     # Construct and return the response
-        return AgentResponse(
+        response = AgentResponse(
             response=model_response["content"],
             model=model_response["model"],
             usage=model_response.get("usage", {})
         )
+
+        # if we have memory service, save assistant's response
+        if self.memory_service:
+            assistant_message = Message(role="assistant", content=response.response)
+            logger.debug(f"Saving assistant response to memory for conversation {conversation_id}")
+            await self.memory_service.save_message(assistant_message, conversation_id)
+
+        return response
+    
+    async def create_conversation_chain(self, model: str = None, system_message: str = None):
+        """
+        Create a LangChain ConversationChain with memory.
+        
+        Args:
+            model: Model to use
+            system_message: Optional system message to set context
+            
+            Returns:
+                A LangChain ConversationChain
+        """
+        if not self.memory_service:
+            raise ValueError("Memory service is required for conversation chains")
+        
+        model_name = model or settings.DEFAULT_MODEL
+
+        # Extract the model name without provider prefix
+        if ":" in model_name:
+            provider, actual_model = model_name.split(":", 1)
+        else:
+            actual_model = model_name
+
+        llm = ChatOllama(model=actual_model)
+
+        if system_message:
+            prompt = ChatPromptTemplate.from_messages([
+                ("system", system_message),
+                MessagesPlaceholder(variable_name="history"),
+                ("human", "{input}")
+            ])
+        else:
+            prompt = ChatPromptTemplate.from_messages([
+                MessagesPlaceholder(variable_name="history"),
+                ("human", "{input}")
+            ])
+
+            # Create the chain with memory
+
+        chain = ConversationChain(
+            llm=llm,
+            prompt=prompt,
+            memory=self.memory_service.get_langchain_memory(),
+            verbose=True
+        )
+
+        return chain
+    
+
+    async def load_conversation_history(self, conversation_id: str = "default") -> List[Message]:
+        """
+        Load all messages for a specific conversation
+        
+        Args:
+            conversation_id: Unique ID for the conversation
+            
+        Returns:
+            List of message objects from convo
+        """
+        if not self.memory_service:
+            return []
+        return await self.memory_service.load_all_messages(conversation_id)
+
+        
+
+    

@@ -472,3 +472,37 @@ role
 2025-04-02 14:33:36 | INFO | app.services.agent_service:53 | Detected creative task, routing to creative model
 2025-04-02 14:33:36 | INFO | app.services.agent_service:92 | Processing request with model: ollama:mistral
 2025-04-02 14:33:36 | INFO | app.services.agent_service:109 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:12:06 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 08:12:06 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 08:12:06 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 08:12:06 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 08:12:06 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 08:17:34 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 08:17:34 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 08:17:34 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 08:17:34 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 08:17:34 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 08:21:44 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 08:21:44 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 08:21:44 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 08:21:44 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 08:21:44 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 08:21:44 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 08:22:14 | ERROR | app.services.memory.mongo_memory:59 | Error connecting to MongoDB: localhost:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 67ee28f86947ebc5a522056c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 08:22:14 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 67ee28f86947ebc5a522056c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: connection closed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-03 08:22:14 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-03 08:22:16 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-03 08:22:16 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-03 08:22:16 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-03 08:22:16 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-03 08:22:16 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-03 08:22:16 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-03 08:22:16 | INFO | app.services.memory.mongo_memory:57 | Successfully connected to MongoDB:
+2025-04-03 08:22:16 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-03 08:22:16 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-03 08:24:30 | INFO | app.services.agent_service:110 | Processing request with model: ollama:deepseek-r1:7b
+2025-04-03 08:24:30 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:26:19 | INFO | app.services.agent_service:110 | Processing request with model: ollama:deepseek-r1:7b
+2025-04-03 08:26:19 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-03 08:28:29 | INFO | app.services.agent_service:110 | Processing request with model: ollama:deepseek-r1:7b
+2025-04-03 08:28:29 | INFO | app.services.agent_service:127 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
