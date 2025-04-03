@@ -44,9 +44,15 @@ class MongoMemory(BaseMemory):
     def _initialize_connection(self) -> None:
         """ Establish connection to MongoDB"""
         try:
-            self.client = MongoClient(self.connection_string)
+            self.client = MongoClient(
+                self.connection_string,
+                serverSelectionTimeoutMS=5000 # 5 second timeout if mongoDB not available
+            )
             self.db = self.client[self.db_name]
             self.messages_collection = self.db["messages"]
+
+            # Force immediate connection attempt
+            self.client.admin.command('ping')
 
             # Create indexes for efficient querying
             self.messages_collection.create_index([
@@ -57,6 +63,10 @@ class MongoMemory(BaseMemory):
             logger.info("Successfully connected to MongoDB:")
         except Exception as e:
             logger.error(f"Error connecting to MongoDB: {str(e)}")
+            # Clear these to indiciate failure
+            self.client = None
+            self.db = None
+            self.messages_collection = None
             raise
 
     def _message_to_doc(self, message: Message, conversation_id: str) -> Dict[str, Any]:
