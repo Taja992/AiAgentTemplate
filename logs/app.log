@@ -1038,3 +1038,85 @@ role
 2025-04-04 14:18:57 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
 2025-04-04 14:19:31 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
 2025-04-04 14:19:31 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:24:11 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-04 17:24:11 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-04 17:24:11 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-04 17:24:11 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-04 17:24:11 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-04 17:24:11 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-04 17:24:16 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eff99b094efa547fda2825, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-04 17:24:16 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eff99b094efa547fda2825, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-04 17:24:16 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-04 17:24:18 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-04 17:24:18 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-04 17:24:18 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-04 17:24:18 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-04 17:24:18 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-04 17:24:18 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-04 17:24:23 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eff9a23667acb6ed7d7135, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-04 17:24:23 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67eff9a23667acb6ed7d7135, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-04 17:24:23 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-04 17:26:22 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-04 17:26:22 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:22 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:26:22 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:26:22 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:22 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:26:22 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:26:22 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:22 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-04 17:26:22 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:37 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:26:37 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:26:37 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:38 | INFO | app.services.agent_service:58 | Detected creative task, routing to creative model
+2025-04-04 17:26:38 | INFO | app.services.agent_service:122 | Processing request with model: ollama:mistral
+2025-04-04 17:26:38 | INFO | app.services.agent_service:139 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:39 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-04 17:26:39 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:43 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-04 17:26:43 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:26:45 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:26:45 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:26:45 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:27:01 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:27:01 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:27:01 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:27:05 | INFO | app.services.agent_service:58 | Detected creative task, routing to creative model
+2025-04-04 17:27:05 | INFO | app.services.agent_service:122 | Processing request with model: ollama:mistral
+2025-04-04 17:27:05 | INFO | app.services.agent_service:139 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:27:05 | INFO | app.services.agent_service:62 | Detected mathematical task, routing to math model
+2025-04-04 17:27:05 | INFO | app.services.agent_service:122 | Processing request with model: ollama:llama2:13b
+2025-04-04 17:27:05 | INFO | app.services.agent_service:139 | Using task type: MATH, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:27:05 | INFO | app.services.agent_service:58 | Detected creative task, routing to creative model
+2025-04-04 17:27:05 | INFO | app.services.agent_service:122 | Processing request with model: ollama:mistral
+2025-04-04 17:27:05 | INFO | app.services.agent_service:139 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:27:08 | INFO | app.services.agent_service:62 | Detected mathematical task, routing to math model
+2025-04-04 17:27:08 | INFO | app.services.agent_service:122 | Processing request with model: ollama:llama2:13b
+2025-04-04 17:27:08 | INFO | app.services.agent_service:139 | Using task type: MATH, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:32:01 | INFO | app.services.agent_service:122 | Processing request with model: ollama:gemma3:1b
+2025-04-04 17:32:01 | INFO | app.services.agent_service:139 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:32:01 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:32:01 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:32:01 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:32:01 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:32:01 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:32:01 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:32:01 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:32:01 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:32:01 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:32:06 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:32:06 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:32:06 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:37:31 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:37:31 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:37:31 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:37:31 | INFO | app.services.agent_service:58 | Detected creative task, routing to creative model
+2025-04-04 17:37:31 | INFO | app.services.agent_service:122 | Processing request with model: ollama:mistral
+2025-04-04 17:37:31 | INFO | app.services.agent_service:139 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:37:31 | INFO | app.services.agent_service:54 | Detected programming language in query, routing to code model
+2025-04-04 17:37:31 | INFO | app.services.agent_service:122 | Processing request with model: ollama:codellama:7b
+2025-04-04 17:37:31 | INFO | app.services.agent_service:139 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-04 17:37:31 | INFO | app.services.agent_service:62 | Detected mathematical task, routing to math model
+2025-04-04 17:37:31 | INFO | app.services.agent_service:122 | Processing request with model: ollama:llama2:13b
+2025-04-04 17:37:31 | INFO | app.services.agent_service:139 | Using task type: MATH, temperature: 0.7, max_tokens: 1000

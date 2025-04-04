@@ -5,15 +5,8 @@
 description: "My eval"
 
 prompts:
-  #- "Hello"
-  #- "How are you?"
- # - file://prompts/code.json
-  - file://prompts/test.txt
-  # - file://prompts/creative.json
-  # - file://prompts/default.json
-  # - file://prompts/math.json
-  # - file://prompts/translator.json
-  
+  - file://prompts/prompts.txt
+
 
 providers:
   - id: https
