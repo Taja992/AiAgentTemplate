@@ -5,20 +5,25 @@
 description: "My eval"
 
 prompts:
-  - file://prompts/code.json
-  - file://prompts/test.json
+  #- "Hello"
+  #- "How are you?"
+ # - file://prompts/code.json
+  - file://prompts/test.txt
   # - file://prompts/creative.json
   # - file://prompts/default.json
   # - file://prompts/math.json
   # - file://prompts/translator.json
+  
 
 providers:
   - id: https
     config:
-      url: "http://localhost:8000/api/chat?skip_memory=true&conversation_id=promptfoo"
+      url: "http://127.0.0.1:8000/api/chat?skip_memory=true&conversation_id=promptfoo"
       method: POST
       headers:
-        'accept': application/json
         Content-Type: application/json
-      body: '{{ prompt }}'
-      transformResponse: 'json.response'
+      body:
+        messages:
+          - role: user
+            content: "{{prompt}}"
+      transformResponse: 'json.response' 

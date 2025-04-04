@@ -1,0 +1,6 @@
+testCases:
+  - description: "Joke request"
+    prompt: '{"messages":[{"role":"user","content":"Tell me a joke"}]}'
+  
+  - description: "Greeting request"
+    prompt: '{"messages":[{"role":"user","content":"How are you?"}]}'
