@@ -49,7 +49,15 @@ logging.getLogger("uvicorn").setLevel(logging.WARNING)
 logging.getLogger("uvicorn.access").setLevel(logging.WARNING)
 logging.getLogger("starlette").setLevel(logging.WARNING)
 logging.getLogger("langchain").setLevel(logging.WARNING)
+logging.getLogger("faiss").setLevel(logging.WARNING) 
 logging.getLogger("aiohttp").setLevel(logging.WARNING)
+
+
+logging.getLogger("app.services.rag").setLevel(logging.INFO)
+logging.getLogger("app.services.rag.embeddings").setLevel(logging.INFO)
+logging.getLogger("app.services.rag.vector_store").setLevel(logging.INFO)
+logging.getLogger("app.services.rag.document_store").setLevel(logging.INFO)
+logging.getLogger("app.services.rag.retriever").setLevel(logging.INFO)
 
 def get_logger(name: str) -> logging.Logger:
     """

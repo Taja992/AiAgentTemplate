@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.routes import agent, health
+from app.api.routes import agent, health, rag
 from app.config import settings
 import uvicorn
 
@@ -14,6 +14,7 @@ app = FastAPI(
 # Include the agent router
 app.include_router(agent.router, prefix="/api")
 app.include_router(health.router, prefix="/api")
+app.include_router(rag.router, prefix="/api/rag")
 
 
 if __name__ == "__main__":
