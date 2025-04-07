@@ -8,27 +8,27 @@ The AI Agent Template follows a clean, layered architecture with clear separatio
 
 ```mermaid
 graph TD
+    graph TD
     %% API Layer
     A[Client Request] -->|HTTP Request| B[FastAPI Endpoint]
     B -->|Input Validation| C[API Router]
     
     %% Service Layer 
     C -->|Request| D[AgentService]
-    C -->|RAG Request| RAG[RAG API Router]
     D -->|Process Request| E[ModelService]
     D <-->|Store/Retrieve Messages| N[MemoryService]
     
-    %% RAG Components
-    RAG -->|Document Processing| R1[RAGService]
-    R1 <-->|Vector Search| R2[FAISS VectorStore]
-    R1 <-->|Document Storage| R3[FileSystemDocumentStore]
-    R1 <-->|Text Embedding| R4[OllamaEmbeddingService]
-    R1 <-->|Retrieval| R5[VectorStoreRetriever]
-    R1 <-->|Document Splitting| R6[DocumentSplitter]
-    R1 <-->|File Processing| R7[FileLoader]
-    
-    %% Potential Agent-RAG Connection (Not Yet Implemented)
-    D -.->|Future Integration| R1
+    %% RAG System - NEW
+    C -->|RAG Request| W[RAG Router]
+    W -->|Document Processing/Query| X[RAGService]
+    X -->|Embedding Generation| Y[OllamaEmbeddingService]
+    X -->|Document Storage| Z[DocumentStore]
+    X -->|Vector Search| AA[VectorStore]
+    X -->|Document Retrieval| AB[Retriever]
+    X -->|Document Splitting| AC[DocumentSplitter]
+    X -->|File Loading| AD[FileLoader]
+    Z -.->|Persistence| AE[(File System)]
+    AA -.->|FAISS Index| AF[(Vector DB)]
     
     %% Memory Layer
     N -->|Short-term Storage| O[ConversationBufferMemoryWrapper]
@@ -39,14 +39,16 @@ graph TD
     E -->|Provider Selection| F{Provider?}
     F -->|Ollama| G[OllamaModelHandler]
     F -->|Future Provider| H[Other Providers]
-    E -->|Special Tasks| X[ModelChains]
-    X -->|Code Tasks| S[CodeLlamaChain]
+    E -->|Special Tasks| R[ModelChains]
+    R -->|Code Tasks| S[CodeLlamaChain]
+    
+    %% RAG also uses ModelService - NEW
+    X -->|Generate Answers| E
     
     %% Model Interaction
     G -->|API Call| I[Ollama API]
     H -->|API Call| J[Other Model APIs]
-    R4 -->|Embedding Request| I
-    R1 -->|LLM Request| I
+    Y -->|Embedding API Call| I
     
     %% Response Flow
     I -->|Response| K[Model Response]
@@ -55,27 +57,23 @@ graph TD
     K -->|Processed Response| E
     E -->|Model Result| D
     D -->|Agent Response| C
+    X -->|RAG Response| W
+    W -->|HTTP Response| B
     C -->|HTTP Response| B
     B -->|JSON Response| A
-    
-    %% RAG Response Flow
-    R2 <-->|Store/Retrieve Vectors| R8[(Vector Files)]
-    R3 <-->|Store/Retrieve Documents| R9[(Document Files)]
-    R1 -->|RAG Results| RAG
-    RAG -->|Document/Answer| B
     
     %% Memory Integration with LangChain
     O <-.->|Integration| T[LangChain]
     D <-.->|Create Chains| T
     S <-.->|Uses| T
-    R1 <-.->|RetrievalQA Chain| T
+    AB <-.->|Uses| T
     
     %% Optional Components
     L[Configuration] -.->|Settings| D
     L -.->|Settings| E
     L -.->|Settings| G
     L -.->|Settings| N
-    L -.->|Settings| R1
+    L -.->|Settings| X
     
     %% Logging
     M[Logging] -.->|Log Events| D
@@ -84,19 +82,15 @@ graph TD
     M -.->|Log Events| N
     M -.->|Log Events| O
     M -.->|Log Events| P
-    M -.->|Log Events| R1
-    M -.->|Log Events| R2
-    M -.->|Log Events| R3
-    M -.->|Log Events| R4
-    M -.->|Log Events| R5
+    M -.->|Log Events| X
+    M -.->|Log Events| Y
+    M -.->|Log Events| Z
+    M -.->|Log Events| AA
+    M -.->|Log Events| AB
     
-    %% Style for Not Yet Implemented Components
-    classDef notImplemented fill:#f9f,stroke:#333,stroke-dasharray: 5 5;
-    class "D -.->|Future Integration| R1" notImplemented;
-    
-    %% Component Types
-    classDef ragComponents fill:#d4f1f9,stroke:#333;
-    class R1,R2,R3,R4,R5,R6,R7,R8,R9 ragComponents;
+    %% Conversation Management
+    U[Conversation IDs] -.->|Organizes| N
+    N -.->|List All Convos| V[API Endpoints]
 ```
 
 ## Key Components
