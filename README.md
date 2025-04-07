@@ -8,7 +8,6 @@ The AI Agent Template follows a clean, layered architecture with clear separatio
 
 ```mermaid
 graph TD
-    graph TD
     %% API Layer
     A[Client Request] -->|HTTP Request| B[FastAPI Endpoint]
     B -->|Input Validation| C[API Router]
