@@ -168,3 +168,134 @@ The system supports multiple simultaneous conversations:
 - **Ollama**: For local model deployment
 - **FastAPI**: For API endpoints and request handling
 - **LangChain**: For conversation chains and memory integration
+
+# Breaking Down the Mermaid Diagram
+
+1. **Core System Architecture**: Shows the basic request-response flow and main service components
+2. **Model Provider Architecture**: Focuses on model selection and interaction
+3. **Memory System Architecture**: Details the dual-layer memory system
+4. **RAG System Architecture**: Highlights RAG components and their integration
+
+## 1. Core System Architecture
+
+```mermaid
+graph TD
+    %% API Layer
+    A[Client Request] -->|HTTP Request| B[FastAPI Endpoint]
+    B -->|Input Validation| C[API Router]
+    
+    %% Service Layer 
+    C -->|Request| D[AgentService]
+    D -->|Process Request| E[ModelService]
+    D <-->|Store/Retrieve Messages| N[MemoryService]
+    
+    %% Response Flow (Simplified)
+    E -->|Model Result| D
+    D -->|Agent Response| C
+    C -->|HTTP Response| B
+    B -->|JSON Response| A
+    
+    %% Configuration & Logging
+    L[Configuration] -.->|Settings| D
+    L -.->|Settings| E
+    L -.->|Settings| N
+    M[Logging] -.->|Log Events| D
+    M -.->|Log Events| E
+    M -.->|Log Events| N
+```
+
+## 2. Model Provider Architecture
+
+```mermaid
+graph TD
+    %% Model Provider Layer
+    E[ModelService] -->|Provider Selection| F{Provider?}
+    F -->|Ollama| G[OllamaModelHandler]
+    F -->|Future Provider| H[Other Providers]
+    E -->|Special Tasks| R[ModelChains]
+    R -->|Code Tasks| S[CodeLlamaChain]
+    
+    %% Model Interaction
+    G -->|API Call| I[Ollama API]
+    H -->|API Call| J[Other Model APIs]
+    
+    %% Response Flow
+    I -->|Response| K[Model Response]
+    J -->|Response| K
+    S -->|Response| K
+    K -->|Processed Response| E
+    
+    %% LangChain Integration
+    S <-.->|Uses| T[LangChain]
+    
+    %% Configuration & Logging
+    L[Configuration] -.->|Settings| E
+    L -.->|Settings| G
+    M[Logging] -.->|Log Events| E
+    M[Logging] -.->|Log Events| G
+```
+
+## 3. Memory System Architecture
+
+```mermaid
+graph TD
+    %% Memory Service
+    D[AgentService] <-->|Store/Retrieve Messages| N[MemoryService]
+    
+    %% Memory Components
+    N -->|Short-term Storage| O[ConversationBufferMemoryWrapper]
+    N -->|Long-term Storage| P[MongoMemory]
+    P <-->|Persistence| Q[(MongoDB)]
+    
+    %% Memory Integration & Management
+    O <-.->|Integration| T[LangChain]
+    U[Conversation IDs] -.->|Organizes| N
+    N -.->|List All Convos| V[API Endpoints]
+    
+    %% Configuration & Logging
+    L[Configuration] -.->|Settings| N
+    M[Logging] -.->|Log Events| N
+    M -.->|Log Events| O
+    M -.->|Log Events| P
+```
+
+## 4. RAG System Architecture
+
+```mermaid
+graph TD
+    %% RAG API
+    C[API Router] -->|RAG Request| W[RAG Router]
+    W -->|Document Processing/Query| X[RAGService]
+    
+    %% RAG Components
+    X -->|Embedding Generation| Y[OllamaEmbeddingService]
+    X -->|Document Storage| Z[DocumentStore]
+    X -->|Vector Search| AA[VectorStore]
+    X -->|Document Retrieval| AB[Retriever]
+    X -->|Document Splitting| AC[DocumentSplitter]
+    X -->|File Loading| AD[FileLoader]
+    
+    %% RAG Persistence
+    Z -.->|Persistence| AE[(File System)]
+    AA -.->|FAISS Index| AF[(Vector DB)]
+    
+    %% RAG Integration with Models
+    X -->|Generate Answers| E[ModelService]
+    Y -->|Embedding API Call| I[Ollama API]
+    
+    %% RAG Response Flow
+    X -->|RAG Response| W
+    W -->|HTTP Response| B[FastAPI Endpoint]
+    
+    %% LangChain Integration
+    AB <-.->|Uses| T[LangChain]
+    
+    %% Configuration & Logging
+    L[Configuration] -.->|Settings| X
+    M[Logging] -.->|Log Events| X
+    M -.->|Log Events| Y
+    M -.->|Log Events| Z
+    M -.->|Log Events| AA
+    M -.->|Log Events| AB
+```
+
