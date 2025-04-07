@@ -90,13 +90,13 @@ graph TD
     M -.->|Log Events| R4
     M -.->|Log Events| R5
     
+    %% Style for Not Yet Implemented Components
+    classDef notImplemented fill:#f9f,stroke:#333,stroke-dasharray: 5 5;
+    class "D -.->|Future Integration| R1" notImplemented;
+    
     %% Component Types
     classDef ragComponents fill:#d4f1f9,stroke:#333;
     class R1,R2,R3,R4,R5,R6,R7,R8,R9 ragComponents;
-    
-    %% Not Implemented Components
-    classDef notImplemented fill:#f9f,stroke:#333,stroke-dasharray: 5 5;
-    class "D -.->|Future Integration| R1" notImplemented;
 ```
 
 ## Key Components
