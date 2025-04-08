@@ -1,7 +1,7 @@
 import asyncio
 from typing import List, Dict, Any, Optional
 from functools import partial
-from langchain_community.embeddings.ollama import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 from app.services.rag.base import BaseEmbeddings
 from app.config import settings
 from app.utils.logger import get_logger
@@ -37,8 +37,7 @@ class OllamaEmbeddingService(BaseEmbeddings):
         # Initialize the LangChain OllamaEmbeddings
         self.ollama_embeddings = OllamaEmbeddings(
             model=self.model_name,
-            base_url=self.base_url,
-            dimensions=self.dimensions
+            base_url=self.base_url
         )
 
         logger.info(f"Initialized OllamaEmbeddingService with model: {model_name}")
