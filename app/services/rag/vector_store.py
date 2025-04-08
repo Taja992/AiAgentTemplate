@@ -66,8 +66,8 @@ class FAISSVectorStore(BaseVectorStore):
                     partial(
                         FAISS.load_local,
                         self.index_path,
-                        self.embedding_service.ollama_embeddings
-                        allow_dangerous_deserialization=True, # Allow loading of potentially unsafe data
+                        self.embedding_service.ollama_embeddings,
+                        allow_dangerous_deserialization=True # Allow loading of potentially unsafe data
                     )
                 )
                 logger.info(f"Loading existing FAISS index from {self.index_path}")
