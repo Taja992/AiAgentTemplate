@@ -1948,3 +1948,39 @@ pip install python-multipart
 2025-04-08 14:10:15 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Can you read the documents? Whats the weather like...
 2025-04-08 14:10:15 | INFO | app.services.rag_service:214 | Retrieved 2 documents
 2025-04-08 14:10:15 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-08 14:45:34 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 14:45:34 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 14:45:34 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 14:45:34 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 14:45:34 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 14:45:34 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 14:45:34 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 14:45:34 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 14:45:34 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 14:45:34 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 14:45:34 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 14:45:34 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 14:45:34 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:45:36 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 14:45:36 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 14:45:36 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 14:45:36 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 14:45:36 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 14:45:36 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 14:45:36 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 14:45:36 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 14:45:36 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 14:45:36 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 14:45:36 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 14:45:36 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 14:45:36 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:45:53 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-08 14:45:53 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-08 14:45:53 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-08 14:45:53 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Can you read the documents? Whats the weather like...
+2025-04-08 14:45:53 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-08 14:45:53 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-04-08 14:45:55 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Can you read the documents? Whats the weather like...
+2025-04-08 14:45:55 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Can you read the documents? Whats the weather like...
+2025-04-08 14:45:55 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-08 14:45:55 | INFO | app.services.agent_service:176 | Added 2 documents as context

@@ -17,7 +17,7 @@ graph TD
     D -->|Process Request| E[ModelService]
     D <-->|Store/Retrieve Messages| N[MemoryService]
     
-    %% RAG System - NEW
+    %% RAG System - UPDATED
     C -->|RAG Request| W[RAG Router]
     W -->|Document Processing/Query| X[RAGService]
     X -->|Embedding Generation| Y[OllamaEmbeddingService]
@@ -28,6 +28,17 @@ graph TD
     X -->|File Loading| AD[FileLoader]
     Z -.->|Persistence| AE[(File System)]
     AA -.->|FAISS Index| AF[(Vector DB)]
+    
+    %% Collection Management - NEW
+    C -->|Collection Management| W
+    W -->|List Collections| X
+    W -->|Delete Collection| X
+    W -->|Retrieve from Collection| X
+    
+    %% AgentService-RAG Integration - NEW
+    D <-->|Retrieve Relevant Documents| X
+    X -->|Document Context| D
+    D -->|Context-Augmented Request| E
     
     %% Memory Layer
     N -->|Short-term Storage| O[ConversationBufferMemoryWrapper]
@@ -41,7 +52,7 @@ graph TD
     E -->|Special Tasks| R[ModelChains]
     R -->|Code Tasks| S[CodeLlamaChain]
     
-    %% RAG also uses ModelService - NEW
+    %% RAG also uses ModelService
     X -->|Generate Answers| E
     
     %% Model Interaction
@@ -49,13 +60,13 @@ graph TD
     H -->|API Call| J[Other Model APIs]
     Y -->|Embedding API Call| I
     
-    %% Response Flow
+    %% Response Flow - UPDATED
     I -->|Response| K[Model Response]
     J -->|Response| K
     S -->|Response| K
     K -->|Processed Response| E
     E -->|Model Result| D
-    D -->|Agent Response| C
+    D -->|RAG-Enhanced Response| C
     X -->|RAG Response| W
     W -->|HTTP Response| B
     C -->|HTTP Response| B
@@ -66,6 +77,7 @@ graph TD
     D <-.->|Create Chains| T
     S <-.->|Uses| T
     AB <-.->|Uses| T
+    X <-.->|RetrievalQA Chain| T
     
     %% Optional Components
     L[Configuration] -.->|Settings| D
@@ -188,10 +200,17 @@ graph TD
     C -->|Request| D[AgentService]
     D -->|Process Request| E[ModelService]
     D <-->|Store/Retrieve Messages| N[MemoryService]
+    D <-->|Retrieve Documents| X[RAGService]
+    
+    %% Collections Endpoints - NEW
+    C -->|Collection Management| W[RAG Router]
+    W -->|List Collections| X
+    W -->|Delete Collection| X
+    W -->|Retrieve from Collection| X
     
     %% Response Flow (Simplified)
     E -->|Model Result| D
-    D -->|Agent Response| C
+    D -->|RAG-Enhanced Response| C
     C -->|HTTP Response| B
     B -->|JSON Response| A
     
@@ -199,9 +218,11 @@ graph TD
     L[Configuration] -.->|Settings| D
     L -.->|Settings| E
     L -.->|Settings| N
+    L -.->|Settings| X
     M[Logging] -.->|Log Events| D
     M -.->|Log Events| E
     M -.->|Log Events| N
+    M -.->|Log Events| X
 ```
 
 ## 2. Model Provider Architecture
@@ -225,14 +246,21 @@ graph TD
     S -->|Response| K
     K -->|Processed Response| E
     
+    %% AgentService-RAG Integration - UPDATED
+    D[AgentService] -->|Context-Augmented Request| E
+    D <-->|Retrieve Relevant Documents| X[RAGService]
+    X -->|Document Context| D
+    
     %% LangChain Integration
     S <-.->|Uses| T[LangChain]
     
     %% Configuration & Logging
     L[Configuration] -.->|Settings| E
     L -.->|Settings| G
+    L -.->|Settings| D
     M[Logging] -.->|Log Events| E
     M[Logging] -.->|Log Events| G
+    M[Logging] -.->|Log Events| D
 ```
 
 ## 3. Memory System Architecture
@@ -263,9 +291,19 @@ graph TD
 
 ```mermaid
 graph TD
-    %% RAG API
+    %% RAG API - UPDATED
     C[API Router] -->|RAG Request| W[RAG Router]
     W -->|Document Processing/Query| X[RAGService]
+    
+    %% Collection Management - NEW
+    W -->|List Collections| X
+    W -->|Delete Collection| X
+    W -->|Retrieve from Collection| X
+    
+    %% Agent Integration - UPDATED
+    D[AgentService] <-->|Document Retrieval| X
+    X -->|Context Documents| D
+    D -->|Enhance Prompts| E[ModelService]
     
     %% RAG Components
     X -->|Embedding Generation| Y[OllamaEmbeddingService]
@@ -280,7 +318,7 @@ graph TD
     AA -.->|FAISS Index| AF[(Vector DB)]
     
     %% RAG Integration with Models
-    X -->|Generate Answers| E[ModelService]
+    X -->|Generate Answers| E
     Y -->|Embedding API Call| I[Ollama API]
     
     %% RAG Response Flow
@@ -289,6 +327,7 @@ graph TD
     
     %% LangChain Integration
     AB <-.->|Uses| T[LangChain]
+    X <-.->|RetrievalQA Chain| T
     
     %% Configuration & Logging
     L[Configuration] -.->|Settings| X
