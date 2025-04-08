@@ -11,6 +11,9 @@ async def chat(
     request: AgentRequest,
     skip_memory: bool = False,
     conversation_id: Optional[str] = "default",
+    use_rag: bool = True,
+    rag_collection: str = "default",
+    rag_num_results: int = 3,
     agent_service: AgentService = Depends(get_agent_service)):
     """
     Chat with an AI agent using various models.
@@ -30,6 +33,9 @@ async def chat(
             max_tokens=request.max_tokens,
             conversation_id=conversation_id,
             skip_memory=skip_memory,
+            use_rag=use_rag,
+            rag_collection=rag_collection,
+            rag_num_results=rag_num_results,
             **request.additional_params
         )
         return response

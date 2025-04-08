@@ -3,6 +3,7 @@ import asyncio
 from langchain.schema import Document
 from langchain.chains import RetrievalQA
 from langchain_community.llms import Ollama
+from pathlib import Path
 
 from app.models.rag_schemas import DocumentChunk, DocumentMetadata, RAGRequest, RAGResponse
 from app.services.rag.embeddings import OllamaEmbeddingService
@@ -65,7 +66,8 @@ class RAGService:
             file_path: str,
             metadata: Optional[Dict[str, Any]] = None,
             chunk_size: int = 1000,
-            chunk_overlap: int = 200
+            chunk_overlap: int = 200,
+            collection_name: str = "default"
     ) -> List[str]:
         """
         process a file for RAG, extracting text, chunking, and storing in vector DB.
@@ -93,7 +95,8 @@ class RAGService:
             text_content,
             metadata or {"source": file_path},
             chunk_size,
-            chunk_overlap
+            chunk_overlap,
+            collection_name
         )
     
     async def process_text(
@@ -101,7 +104,8 @@ class RAGService:
             text: str,
             metadata: Dict[str, Any],
             chunk_size: int = 1000,
-            chunk_overlap: int = 200
+            chunk_overlap: int = 200,
+            collection_name: str = "default"
     ) -> List[str]:
         """
         Process text for RAG, chunking and storing in vector DB.
@@ -138,7 +142,8 @@ class RAGService:
             chunk_metadata = {
                 **metadata,
                 "chunk_index": i,
-                "chunk_count": len(text_chunks)
+                "chunk_count": len(text_chunks),
+                "collection": collection_name
             }
 
             # Store in document store
@@ -156,9 +161,19 @@ class RAGService:
                 )
             )
 
+        # Use the specified collection's vector store
+        vector_store = (
+            self.vector_store if collection_name == self.default_collection
+            else FAISSVectorStore(
+                embedding_service=self.embedding_service,
+                persist_directory=self.persist_directory,
+                collection_name=collection_name
+            )
+        )
+
         #Store documents in vector Database
-        await self.vector_store.add_documents(langchain_docs)
-        logger.info(f"Added {len(langchain_docs)} documents to vector store")
+        await vector_store.add_documents(langchain_docs)
+        logger.info(f"Added {len(langchain_docs)} documents to vector store collection: {collection_name}")
         return document_ids
 
 
@@ -315,5 +330,29 @@ class RAGService:
         # as that would require tracking which document IDs belong to which collection
 
         return True
+    
+    async def list_collections(self) -> List[str]:
+        """
+        List all available collections in the vector store.
+        
+        Returns:
+            List of collection names
+        """
+        logger.info("Listing all collections")
+
+        try:
+            # Find all subdirectories in the persist_directory
+            collections = []
+            persist_path = Path(self.persist_directory)
+
+            if persist_path.exists() and persist_path.is_dir():
+                # List all directories (Each directory is a collection)
+                collections = [d.name for d in persist_path.iterdir() if d.is_dir()]
+
+            logger.info(f"Found {len(collections)} collections")
+            return collections
+        except Exception as e:
+            logger.error(f"Error listing collections: {str(e)}")
+            return []
 
 

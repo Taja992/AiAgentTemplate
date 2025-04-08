@@ -38,6 +38,7 @@ async def upload_documents(
 @router.post("/documents/upload-file", response_model=List[str])
 async def upload_file(
     file: UploadFile = File(...),
+    collection_name: str = Form("default"),
     chunk_size: int = Form(1000),
     chunk_overlap: int = Form(200),
     rag_service: RAGService = Depends(get_rag_service)
@@ -56,7 +57,8 @@ async def upload_file(
             file_path=temp_file_path,
             metadata={"filename": file.filename, "content_type": file.content_type},
             chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap
+            chunk_overlap=chunk_overlap,
+            collection_name=collection_name
         )
 
         # Clean up temp file
@@ -167,3 +169,14 @@ async def delete_collection(
         return success
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error deleting collection: {str(e)}")
+    
+
+@router.get("/collections", response_model=List[str])
+async def list_collections(
+    rag_service: RAGService = Depends(get_rag_service)
+):
+    """
+    List all available collections
+    """
+    collections = await rag_service.list_collections()
+    return collections

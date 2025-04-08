@@ -6,8 +6,9 @@ from app.services.rag_service import RAGService
 # Create singleton instances
 model_service = ModelService()
 memory_service = MemoryService()
-agent_service = AgentService(model_service, memory_service)
 rag_service = RAGService()
+agent_service = AgentService(model_service, memory_service, rag_service)
+
 
 
 def get_agent_service():

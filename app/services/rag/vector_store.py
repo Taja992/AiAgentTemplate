@@ -1,6 +1,7 @@
 import os
 import asyncio
 import tempfile
+import shutil
 from typing import List, Optional, Dict, Any
 from functools import partial
 
@@ -66,20 +67,23 @@ class FAISSVectorStore(BaseVectorStore):
                         FAISS.load_local,
                         self.index_path,
                         self.embedding_service.ollama_embeddings
+                        allow_dangerous_deserialization=True, # Allow loading of potentially unsafe data
                     )
                 )
                 logger.info(f"Loading existing FAISS index from {self.index_path}")
             except Exception as e:
                 logger.error(f"Error loading FAISS index: {str(e)}")
                 # If loading fail create a new one
-                self.faiss_index = FAISS(
-                    embedding_function=self.embedding_service.ollama_embeddings,
-                    **self.index_kwargs,
+                self.faiss_index = FAISS.from_texts(
+                    texts=[""], # Initialize with empty text - we'll add real documents later
+                    embedding=self.embedding_service.ollama_embeddings,
+                    **self.index_kwargs
                 )
         else:
             # Create a new index
-            self.faiss_index = FAISS(
-                embedding_function=self.embedding_service.ollama_embeddings
+            self.faiss_index = FAISS.from_texts(
+                texts=[""], # Initialize with empty text - we'll add real documents later
+                embedding=self.embedding_service.ollama_embeddings,
                 **self.index_kwargs
             )
             logger.info("Creating new FAISS index")
@@ -150,20 +154,22 @@ class FAISSVectorStore(BaseVectorStore):
             logger.error(f"Error during similarity search: {str(e)}")
             raise
 
+
+
     async def delete_collection(self) -> None:
         """Delete the entire collection from the vector store."""
         try:
             self.faiss_index = None
-
-            # Remove persisted files if they exist
-            if self.index_path and os.path.exists(self.index_path):
+    
+            if self.persist_directory and os.path.exists(os.path.join(self.persist_directory, self.collection_name)):
+                collection_dir = os.path.join(self.persist_directory, self.collection_name)
+                
                 # Use a thread pool for file operations
                 loop = asyncio.get_event_loop()
-                await loop.run_in_executor(
-                    None,
-                    partial(os.remove, self.index_path)
-                )
-            
+                
+                # Delete directory and all its contents in one operation
+                await loop.run_in_executor(None, partial(shutil.rmtree, collection_dir))
+                
             logger.info(f"Deleted FAISS collection: {self.collection_name}")
         except Exception as e:
             logger.error(f"Error deleting FAISS collection: {str(e)}")

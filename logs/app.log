@@ -1298,3 +1298,653 @@ pip install python-multipart
 2025-04-08 11:30:01 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
 2025-04-08 11:30:01 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
 2025-04-08 11:30:01 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:19:17 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:19:17 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:19:17 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:19:17 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:19:17 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:19:17 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:19:17 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:19:17 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:19:17 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:19:18 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:19:18 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:19:18 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:19:18 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:19:19 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:19:19 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:19:19 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:19:19 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:19:19 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:19:19 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:19:19 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:19:19 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:19:19 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:19:20 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:19:20 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:19:20 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:19:20 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:19:33 | INFO | app.services.rag_service:82 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp9u48kcfl.txt
+2025-04-08 12:19:33 | INFO | app.services.rag_service:119 | Processing text content with chunk size: 1000
+2025-04-08 12:19:33 | INFO | app.services.rag_service:130 | Text Split into 1 chunks
+2025-04-08 12:19:33 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 5357dad7-e824-4839-8838-2fcf69e4a2b6
+2025-04-08 12:19:33 | ERROR | app.services.rag.vector_store:118 | Error adding documents to FAISS index: unsupported operand type(s) for ** or pow(): 'OllamaEmbeddings' and 'dict'
+2025-04-08 12:22:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:22:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:22:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:22:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:22:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:22:37 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:22:37 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:22:37 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:22:37 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:22:37 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:22:37 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:22:37 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:22:37 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:22:40 | INFO | app.services.rag_service:82 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp3gdh94tc.txt
+2025-04-08 12:22:40 | INFO | app.services.rag_service:119 | Processing text content with chunk size: 1000
+2025-04-08 12:22:40 | INFO | app.services.rag_service:130 | Text Split into 1 chunks
+2025-04-08 12:22:40 | INFO | app.services.rag.document_store:74 | Stored doc with ID: b6ea9392-f669-495d-8be9-c0c298ceb33b
+2025-04-08 12:22:40 | ERROR | app.services.rag.vector_store:118 | Error adding documents to FAISS index: FAISS.__init__() missing 3 required positional arguments: 'index', 'docstore', and 'index_to_docstore_id'
+2025-04-08 12:25:22 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:25:22 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:25:22 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:25:22 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:25:22 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:25:22 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:25:22 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:25:22 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:25:22 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:25:22 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:25:22 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:25:22 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:25:22 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:34:56 | INFO | app.services.rag_service:82 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmpapg_tu65.txt
+2025-04-08 12:34:56 | INFO | app.services.rag_service:119 | Processing text content with chunk size: 1000
+2025-04-08 12:34:56 | INFO | app.services.rag_service:130 | Text Split into 1 chunks
+2025-04-08 12:34:56 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 936e32ae-fc7b-4b1e-89d7-f521fd58988d
+2025-04-08 12:34:56 | ERROR | app.services.rag.vector_store:118 | Error adding documents to FAISS index: FAISS.from_embeddings() missing 1 required positional argument: 'text_embeddings'
+2025-04-08 12:36:42 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:36:42 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:36:42 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:36:42 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:36:42 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:36:42 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:36:42 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:36:42 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:36:42 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:36:42 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:36:42 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:36:42 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:36:42 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:36:46 | INFO | app.services.rag_service:82 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmppj4rvn_4.txt
+2025-04-08 12:36:46 | INFO | app.services.rag_service:119 | Processing text content with chunk size: 1000
+2025-04-08 12:36:46 | INFO | app.services.rag_service:130 | Text Split into 1 chunks
+2025-04-08 12:36:46 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 16de962e-f7b7-4c57-8f0d-a9fb59662988
+2025-04-08 12:36:59 | ERROR | app.services.rag.vector_store:120 | Error adding documents to FAISS index: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+2025-04-08 12:45:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:45:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:45:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:45:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:45:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:45:37 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:45:37 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:45:37 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:45:37 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:45:37 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:45:37 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:45:37 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:45:37 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:45:39 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 12:45:39 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 12:45:39 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 12:45:39 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 12:45:39 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 12:45:39 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 12:45:39 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 12:45:39 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 12:45:39 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 12:45:39 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 12:45:39 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 12:45:39 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 12:45:39 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 12:45:46 | INFO | app.services.rag_service:82 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp0zus6sft.txt
+2025-04-08 12:45:46 | INFO | app.services.rag_service:119 | Processing text content with chunk size: 1000
+2025-04-08 12:45:46 | INFO | app.services.rag_service:130 | Text Split into 1 chunks
+2025-04-08 12:45:46 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 4cd3a82e-64bc-4c75-a9de-1dd71d7b2b5c
+2025-04-08 12:45:49 | INFO | app.services.rag.vector_store:87 | Creating new FAISS index
+2025-04-08 12:45:49 | INFO | app.services.rag.vector_store:118 | Added 1 documents to FAISS index
+2025-04-08 12:45:49 | INFO | app.services.rag_service:161 | Added 1 documents to vector store
+2025-04-08 12:48:18 | INFO | app.services.rag.document_store:179 | Listed 5 documents
+2025-04-08 12:48:19 | INFO | app.services.rag.document_store:179 | Listed 5 documents
+2025-04-08 12:49:38 | INFO | app.services.rag.document_store:143 | Deleted document with ID: 16de962e-f7b7-4c57-8f0d-a9fb59662988
+2025-04-08 12:49:52 | INFO | app.services.rag.document_store:143 | Deleted document with ID: 936e32ae-fc7b-4b1e-89d7-f521fd58988d
+2025-04-08 12:49:58 | INFO | app.services.rag.document_store:143 | Deleted document with ID: 5357dad7-e824-4839-8838-2fcf69e4a2b6
+2025-04-08 12:50:04 | INFO | app.services.rag.document_store:143 | Deleted document with ID: b6ea9392-f669-495d-8be9-c0c298ceb33b
+2025-04-08 12:50:11 | INFO | app.services.rag.document_store:143 | Deleted document with ID: 4cd3a82e-64bc-4c75-a9de-1dd71d7b2b5c
+2025-04-08 12:51:02 | INFO | app.services.rag_service:82 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp045xe35p.txt
+2025-04-08 12:51:02 | INFO | app.services.rag_service:119 | Processing text content with chunk size: 1000
+2025-04-08 12:51:02 | INFO | app.services.rag_service:130 | Text Split into 1 chunks
+2025-04-08 12:51:02 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 39838783-5e4f-4f4c-b123-e63c69b36669
+2025-04-08 12:51:04 | INFO | app.services.rag.vector_store:118 | Added 1 documents to FAISS index
+2025-04-08 12:51:04 | INFO | app.services.rag_service:161 | Added 1 documents to vector store
+2025-04-08 13:12:38 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:12:38 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:12:38 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:12:38 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:12:38 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:12:38 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:12:38 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:12:38 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:12:38 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:12:38 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:12:38 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:12:38 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:12:38 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 13:13:09 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:13:09 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:13:09 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:13:09 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:13:09 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:13:09 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:13:09 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:13:09 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:13:09 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:13:10 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:13:10 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:13:10 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:13:10 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 13:13:41 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:13:41 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:13:41 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:13:41 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:13:41 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:13:41 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:13:41 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:13:41 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:13:41 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:13:41 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:13:41 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:13:41 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:13:41 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 13:14:12 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:14:12 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:14:12 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:14:12 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:14:12 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:14:12 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:14:12 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:14:12 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:14:12 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:14:12 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:14:12 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:14:12 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:14:12 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 13:14:47 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:14:47 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:14:47 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:14:47 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:14:47 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:14:47 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:14:47 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:14:47 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:14:47 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:14:47 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:14:47 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:14:47 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:14:47 | INFO | app.services.rag_service:61 | Initialized RAG service with collection: default
+2025-04-08 13:17:00 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:17:00 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:17:00 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:17:00 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:17:00 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:17:00 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:17:00 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:17:00 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:17:00 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:17:01 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:17:01 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:17:01 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:17:01 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:18:15 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:18:15 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:18:15 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:18:15 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:18:15 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:18:15 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:18:15 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:18:15 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:18:15 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:18:15 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:18:15 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:18:15 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:18:15 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:20:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:20:38 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:20:38 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:20:38 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:20:38 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:20:38 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:20:38 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:20:38 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:20:38 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:20:38 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:20:38 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:20:38 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:20:38 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:20:46 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:20:46 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-08 13:20:46 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:20:46 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-08 13:21:04 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmpqye33k2o.txt
+2025-04-08 13:21:04 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-08 13:21:04 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-08 13:21:04 | INFO | app.services.rag.document_store:74 | Stored doc with ID: e01e5e3a-412e-4f04-8d1b-f50112c40205
+2025-04-08 13:21:04 | ERROR | app.services.rag.vector_store:73 | Error loading FAISS index: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-04-08 13:21:06 | INFO | app.services.rag.vector_store:118 | Added 1 documents to FAISS index
+2025-04-08 13:21:06 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: default
+2025-04-08 13:21:11 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp84p6x7e2.txt
+2025-04-08 13:21:11 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-08 13:21:11 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-08 13:21:11 | INFO | app.services.rag.document_store:74 | Stored doc with ID: ffcf9c83-32e1-4d58-a75b-df1e05b37988
+2025-04-08 13:21:11 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: not default
+2025-04-08 13:21:14 | INFO | app.services.rag.vector_store:87 | Creating new FAISS index
+2025-04-08 13:21:14 | INFO | app.services.rag.vector_store:118 | Added 1 documents to FAISS index
+2025-04-08 13:21:14 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: not default
+2025-04-08 13:21:17 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:21:17 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:21:30 | INFO | app.services.rag_service:317 | Deleting collection: not default
+2025-04-08 13:21:30 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: not default
+2025-04-08 13:21:30 | ERROR | app.services.rag.vector_store:171 | Error deleting FAISS collection: [WinError 5] Access is denied: 'data/vector_db\\not default'
+2025-04-08 13:21:44 | INFO | app.services.rag_service:317 | Deleting collection: not_default
+2025-04-08 13:21:44 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: not_default
+2025-04-08 13:21:44 | INFO | app.services.rag.vector_store:169 | Deleted FAISS collection: not_default
+2025-04-08 13:21:50 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:21:50 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:21:51 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:21:51 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:21:52 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:21:52 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:26:33 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:26:33 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:26:33 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:26:33 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:26:33 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:26:33 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:26:33 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:26:33 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:26:33 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:26:34 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:26:34 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:26:34 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:26:34 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:26:46 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:26:46 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:26:50 | INFO | app.services.rag_service:317 | Deleting collection: not_default
+2025-04-08 13:26:50 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: not_default
+2025-04-08 13:26:50 | INFO | app.services.rag.vector_store:175 | Deleted FAISS collection: not_default
+2025-04-08 13:26:53 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:26:53 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:27:11 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:27:12 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:27:12 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:27:12 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:27:12 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:27:12 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:27:12 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:27:12 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:27:12 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:27:12 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:27:12 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:27:12 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:27:12 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:27:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:27:13 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:27:13 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:27:13 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:27:13 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:27:13 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:27:13 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:27:13 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:27:13 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:27:14 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:27:14 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: default
+2025-04-08 13:27:14 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:27:14 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:27:19 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:27:19 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:27:28 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:27:28 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:27:39 | INFO | app.services.rag_service:317 | Deleting collection: not_default
+2025-04-08 13:27:39 | INFO | app.services.rag.vector_store:51 | Initialized FAISS vector store with collection: not_default
+2025-04-08 13:27:39 | INFO | app.services.rag.vector_store:175 | Deleted FAISS collection: not_default
+2025-04-08 13:27:46 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:27:46 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:31:44 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:31:44 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:31:44 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:31:44 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:31:44 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:31:44 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:31:44 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:31:44 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:31:44 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:31:45 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:31:45 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:31:45 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:31:45 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:31:49 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:31:49 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:31:52 | INFO | app.services.rag_service:317 | Deleting collection: not_default
+2025-04-08 13:31:52 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: not_default
+2025-04-08 13:31:52 | INFO | app.services.rag.vector_store:172 | Deleted FAISS collection: not_default
+2025-04-08 13:31:57 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:31:57 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:33:47 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:33:47 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:33:47 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:33:47 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:33:47 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:33:47 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:33:47 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:33:47 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:33:47 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:33:47 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:33:47 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:33:47 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:33:47 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:33:54 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:33:54 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:33:57 | INFO | app.services.rag_service:317 | Deleting collection: not_default
+2025-04-08 13:33:57 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: not_default
+2025-04-08 13:33:57 | INFO | app.services.rag.vector_store:217 | Collection directory not found: not_default
+2025-04-08 13:34:25 | INFO | app.services.rag_service:317 | Deleting collection: not default
+2025-04-08 13:34:25 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: not default
+2025-04-08 13:34:25 | INFO | app.services.rag.vector_store:178 | Successfully deleted FAISS collection: not default
+2025-04-08 13:34:44 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:34:44 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-08 13:34:46 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:34:46 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:34:46 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:34:46 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:34:46 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:34:46 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:34:46 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:34:46 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:34:46 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:34:47 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:34:47 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:34:47 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:34:47 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:35:02 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp3vthmqwo.txt
+2025-04-08 13:35:02 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-08 13:35:02 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-08 13:35:02 | INFO | app.services.rag.document_store:74 | Stored doc with ID: c5d959c7-f8ad-4bf2-b919-ad9c8f867535
+2025-04-08 13:35:02 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: notdefault
+2025-04-08 13:35:05 | INFO | app.services.rag.vector_store:88 | Creating new FAISS index
+2025-04-08 13:35:05 | INFO | app.services.rag.vector_store:119 | Added 1 documents to FAISS index
+2025-04-08 13:35:05 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: notdefault
+2025-04-08 13:35:11 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:35:11 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:35:17 | INFO | app.services.rag_service:317 | Deleting collection: notdefault
+2025-04-08 13:35:17 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: notdefault
+2025-04-08 13:35:17 | INFO | app.services.rag.vector_store:172 | Deleted FAISS collection: notdefault
+2025-04-08 13:35:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:35:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-08 13:36:22 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmpwozm_q8q.txt
+2025-04-08 13:36:22 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-08 13:36:22 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-08 13:36:22 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 461deff4-6ca4-401d-bcad-2b45b752bde1
+2025-04-08 13:36:22 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: notdefault222
+2025-04-08 13:36:24 | INFO | app.services.rag.vector_store:88 | Creating new FAISS index
+2025-04-08 13:36:24 | INFO | app.services.rag.vector_store:119 | Added 1 documents to FAISS index
+2025-04-08 13:36:24 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: notdefault222
+2025-04-08 13:36:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:36:43 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-08 13:36:57 | INFO | app.services.rag_service:317 | Deleting collection: notdefault222
+2025-04-08 13:36:57 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: notdefault222
+2025-04-08 13:36:57 | INFO | app.services.rag.vector_store:172 | Deleted FAISS collection: notdefault222
+2025-04-08 13:37:28 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-08 13:37:28 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-08 13:37:38 | INFO | app.services.rag.document_store:179 | Listed 5 documents
+2025-04-08 13:49:06 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:49:06 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:49:06 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:49:06 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:49:06 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:49:06 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:49:06 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:49:06 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:49:06 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:49:07 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:49:07 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:49:07 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:49:07 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:49:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:49:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:49:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:49:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:49:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:49:37 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:49:37 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:49:37 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:49:37 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:49:38 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:49:38 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:49:38 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:49:38 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:53:34 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:53:34 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:53:34 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:53:34 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:53:34 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:53:34 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:53:34 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:53:34 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:53:34 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:53:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:53:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:53:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:53:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:53:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:53:37 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:53:37 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:53:37 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:53:37 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:53:37 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:53:37 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:53:37 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:53:37 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:54:08 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:54:08 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:54:08 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:54:08 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:54:08 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:54:08 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:54:08 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:54:08 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:54:08 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:54:08 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:54:08 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:54:08 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:54:08 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:57:00 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:57:00 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:57:00 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:57:00 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:57:00 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:57:00 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:57:00 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:57:00 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:57:00 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:57:01 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:57:01 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:57:01 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:57:01 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:57:15 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:57:15 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:57:15 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:57:15 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:57:15 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:57:15 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:57:15 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:57:15 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:57:15 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:57:15 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:57:15 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:57:15 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:57:15 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:57:18 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:57:18 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:57:18 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:57:18 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:57:18 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:57:18 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:57:18 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:57:18 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:57:18 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:57:18 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:57:18 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:57:18 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:57:18 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:58:29 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:58:29 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:58:29 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:58:29 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:58:29 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:58:29 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:58:29 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:58:29 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:58:29 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:58:29 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:58:29 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:58:29 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:58:29 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 13:58:42 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 13:58:42 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 13:58:42 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 13:58:42 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 13:58:42 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 13:58:42 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 13:58:42 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 13:58:42 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 13:58:42 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 13:58:42 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 13:58:42 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 13:58:42 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 13:58:42 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:00:40 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-08 14:00:40 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-08 14:00:40 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-08 14:00:40 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Hello can you read my documents called test?...
+2025-04-08 14:00:40 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-08 14:00:40 | ERROR | app.services.rag.vector_store:74 | Error loading FAISS index: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-04-08 14:00:43 | INFO | app.services.rag.vector_store:150 | Found 1 documents for query: Hello can you read my documents called test?...
+2025-04-08 14:00:43 | INFO | app.services.rag.retriever:60 | Retrieved 1 documents for query: Hello can you read my documents called test?...
+2025-04-08 14:00:43 | INFO | app.services.rag_service:214 | Retrieved 1 documents
+2025-04-08 14:00:43 | INFO | app.services.agent_service:176 | Added 1 documents as context
+2025-04-08 14:02:11 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-08 14:02:11 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-08 14:02:11 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-08 14:02:11 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Inside the documents what does it say my name is?...
+2025-04-08 14:02:11 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-08 14:02:13 | INFO | app.services.rag.vector_store:150 | Found 1 documents for query: Inside the documents what does it say my name is?...
+2025-04-08 14:02:13 | INFO | app.services.rag.retriever:60 | Retrieved 1 documents for query: Inside the documents what does it say my name is?...
+2025-04-08 14:02:13 | INFO | app.services.rag_service:214 | Retrieved 1 documents
+2025-04-08 14:02:13 | INFO | app.services.agent_service:176 | Added 1 documents as context
+2025-04-08 14:04:20 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-08 14:04:20 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-08 14:04:20 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-08 14:04:20 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: That is not my right name, can you try again? My n...
+2025-04-08 14:04:20 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-08 14:04:22 | INFO | app.services.rag.vector_store:150 | Found 1 documents for query: That is not my right name, can you try again? My n...
+2025-04-08 14:04:22 | INFO | app.services.rag.retriever:60 | Retrieved 1 documents for query: That is not my right name, can you try again? My n...
+2025-04-08 14:04:22 | INFO | app.services.rag_service:214 | Retrieved 1 documents
+2025-04-08 14:04:22 | INFO | app.services.agent_service:176 | Added 1 documents as context
+2025-04-08 14:07:07 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 14:07:07 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 14:07:07 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 14:07:07 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 14:07:07 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 14:07:07 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 14:07:07 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 14:07:07 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 14:07:07 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 14:07:07 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 14:07:07 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 14:07:07 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 14:07:07 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:07:09 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 14:07:09 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 14:07:09 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 14:07:09 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 14:07:09 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 14:07:09 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 14:07:09 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 14:07:09 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 14:07:09 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 14:07:09 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 14:07:09 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 14:07:09 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 14:07:09 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:07:17 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmpenmu09_j.txt
+2025-04-08 14:07:17 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-08 14:07:17 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-08 14:07:17 | INFO | app.services.rag.document_store:74 | Stored doc with ID: baea72a0-82c0-4f25-80a4-ef0daa5e7411
+2025-04-08 14:07:17 | ERROR | app.services.rag.vector_store:74 | Error loading FAISS index: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-04-08 14:07:19 | INFO | app.services.rag.vector_store:119 | Added 1 documents to FAISS index
+2025-04-08 14:07:19 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: default
+2025-04-08 14:07:37 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-08 14:07:37 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-08 14:07:37 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-08 14:07:37 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Can you read the documents? If so, what is my name...
+2025-04-08 14:07:37 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-08 14:07:39 | INFO | app.services.rag.vector_store:150 | Found 2 documents for query: Can you read the documents? If so, what is my name...
+2025-04-08 14:07:39 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Can you read the documents? If so, what is my name...
+2025-04-08 14:07:39 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-08 14:07:39 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-08 14:08:45 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 14:08:45 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 14:08:45 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 14:08:45 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 14:08:45 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 14:08:45 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 14:08:45 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 14:08:45 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 14:08:45 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 14:08:45 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 14:08:45 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 14:08:45 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 14:08:45 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:08:46 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-08 14:08:46 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-08 14:08:46 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-08 14:08:46 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-08 14:08:46 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-08 14:08:46 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-08 14:08:46 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-04-08 14:08:46 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-04-08 14:08:46 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-04-08 14:08:47 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-08 14:08:47 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-08 14:08:47 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-08 14:08:47 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-08 14:09:18 | INFO | app.services.rag.document_store:179 | Listed 0 documents
+2025-04-08 14:09:29 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmpod5ibyvt.txt
+2025-04-08 14:09:29 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-08 14:09:29 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-08 14:09:29 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 8300cdc4-0cc9-44a8-bb8c-7cbd59d2d20f
+2025-04-08 14:09:29 | ERROR | app.services.rag.vector_store:74 | Error loading FAISS index: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-04-08 14:09:31 | INFO | app.services.rag.vector_store:119 | Added 1 documents to FAISS index
+2025-04-08 14:09:31 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: default
+2025-04-08 14:09:48 | INFO | app.services.rag.document_store:179 | Listed 1 documents
+2025-04-08 14:10:13 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-08 14:10:13 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-08 14:10:13 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-08 14:10:13 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Can you read the documents? Whats the weather like...
+2025-04-08 14:10:13 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-08 14:10:15 | INFO | app.services.rag.vector_store:150 | Found 2 documents for query: Can you read the documents? Whats the weather like...
+2025-04-08 14:10:15 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Can you read the documents? Whats the weather like...
+2025-04-08 14:10:15 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-08 14:10:15 | INFO | app.services.agent_service:176 | Added 2 documents as context

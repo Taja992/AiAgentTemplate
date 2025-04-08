@@ -20,7 +20,7 @@ class AgentService:
     providing a consistent interface regardless of the underlying model provider.
     """
     
-    def __init__(self, model_service: ModelService, memory_service: MemoryService = None):
+    def __init__(self, model_service: ModelService, memory_service: MemoryService = None, rag_service = None):
         """
         Initialize the agent service with a model service.
         
@@ -29,6 +29,7 @@ class AgentService:
         """
         self.model_service = model_service
         self.memory_service = memory_service
+        self.rag_service = rag_service
 
     async def select_model_for_task(self, messages: List[Message]) -> str:
         """
@@ -77,6 +78,9 @@ class AgentService:
         max_tokens: Optional[int] = None,
         conversation_id: str = "default",
         skip_memory: bool = False,
+        use_rag: bool = True,
+        rag_collection: str = "default",
+        rag_num_results: int = 3,
         **additional_params
         ) -> AgentResponse:
 
@@ -89,6 +93,10 @@ class AgentService:
             temperature: Creativity parameter (0-1)
             max_tokens: Maximum number of tokens to generate
             conversation_id: Unique ID for convo
+            skip_memory: Whether to skip loading/saving memory
+            use_rag: Whether to enhance response with document retreival
+            rag_collection: Collection name for relevant documents
+            rag_num_results: Number of top documents to retrieve
             additional_params: Any additional model-specific parameters
         
         Returns:
@@ -138,6 +146,39 @@ class AgentService:
 
         logger.info(f"Using task type: {task_type}, temperature: {temp}, max_tokens: {tokens}")
     
+        user_query = next((msg.content for msg in reversed(messages) if msg.role.lower() == "user"),"")
+
+        # RAG Implementation
+        context_documents = []
+        if use_rag and user_query and hasattr(self, 'rag_service') and self.rag_service:
+            try:
+                logger.info(f"Retrieving relevant documents from {rag_collection} collection")
+                documents = await self.rag_service.retrieve_relevant_documents(
+                    query=user_query,
+                    top_k=rag_num_results,
+                    collection_name=rag_collection
+                )
+
+                if documents:
+                    # Format retrieved doc as context
+                    context_str = "\n\n".join([f"Document: {doc.page_content}" for doc in documents])
+                    context_message = Message(
+                        role="system",
+                        content=f"Here are some relevant documents that may help with the query:\n\n{context_str}\n\n"
+                                f"Use this information to help answer the user's question."
+                    )
+                    # Insert context before the most recent user message
+                    for i in range(len(messages)-1, -1, -1):
+                        if messages[i].role.lower() == "user":
+                            messages.insert(i, context_message)
+                            break
+
+                    logger.info(f"Added {len(documents)} documents as context")
+                    context_documents = documents
+            except Exception as e:
+                logger.error(f"Error retrieving documents: {str(e)}")
+                # Continue without RAG if retrieval fails
+
         # Use the model service to get a response
         model_response = await self.model_service.generate(
             messages=messages,
