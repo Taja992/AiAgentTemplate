@@ -27,8 +27,24 @@ class DocumentUploadRequest(BaseModel):
     document_name: str = Field(..., description="Name of the document")
     content: str = Field(..., description="Content of the document")
     metadata: Optional[DocumentMetadata] = Field(None, description="Optional metadata for the document")
+    collection_name: str = Field("default", description="Collection name to store the document in")
     chunk_size: int = Field(1000, description="Size of each chunk in characters")
     chunk_overlap: int = Field(200, description="Overlap size between chunks in characters")
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "document_name": "research_paper.pdf",
+                "content": "This is example document content...",
+                "metadata": {
+                    "source": "user_upload",
+                    "author": "Jane Doe"
+                },
+                "collection_name": "research_papers",
+                "chunk_size": 1000,
+                "chunk_overlap": 200
+            }
+        }
 
 class RAGRequest(BaseModel):
     """Request for a RAG-augmented response."""

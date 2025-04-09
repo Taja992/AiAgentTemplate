@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import agent, health, rag
 from app.config import settings
 import uvicorn
@@ -8,6 +9,15 @@ app = FastAPI(
     title=settings.API_TITLE,
     description=settings.API_DESCRIPTION,
     version=settings.API_VERSION,
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"], # Vite's default dev server
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
