@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routes import agent, health, rag
+from app.api.routes import agent, health, rag, ollama
 from app.config import settings
 import uvicorn
 
@@ -25,6 +25,7 @@ app.add_middleware(
 app.include_router(agent.router, prefix="/api")
 app.include_router(health.router, prefix="/api")
 app.include_router(rag.router, prefix="/api/rag")
+app.include_router(ollama.router, prefix="/api")
 
 
 if __name__ == "__main__":

@@ -2145,3 +2145,42 @@ pip install python-multipart
 2025-04-09 19:41:18 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Can you show me some python code for hello world t...
 2025-04-09 19:41:18 | INFO | app.services.rag_service:214 | Retrieved 2 documents
 2025-04-09 19:41:18 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-09 23:03:14 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-09 23:03:14 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-09 23:03:14 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-09 23:03:14 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-09 23:03:14 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-09 23:03:14 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-09 23:03:19 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f6e0921587449cccc317da, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-09 23:03:19 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f6e0921587449cccc317da, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-09 23:03:19 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-09 23:03:20 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-09 23:03:20 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-09 23:03:20 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-09 23:03:20 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-09 23:03:21 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-09 23:03:21 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-09 23:03:21 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-09 23:03:21 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-09 23:03:21 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-09 23:03:21 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-09 23:03:26 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f6e099c0fb9d9dbfa925fa, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-09 23:03:26 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f6e099c0fb9d9dbfa925fa, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-09 23:03:26 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-09 23:03:27 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-09 23:03:27 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-09 23:03:27 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-09 23:03:27 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-09 23:05:51 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-09 23:05:51 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-09 23:05:51 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-09 23:05:51 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-09 23:05:51 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-09 23:05:51 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-09 23:05:56 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f6e12f8aa7a63c6f4ae882, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-09 23:05:56 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f6e12f8aa7a63c6f4ae882, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-09 23:05:56 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-09 23:05:57 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-09 23:05:57 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-09 23:05:57 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-09 23:05:57 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
