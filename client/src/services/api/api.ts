@@ -192,6 +192,34 @@ export interface DocumentUploadRequest {
   chunk_overlap?: number;
 }
 
+/**
+ * DocumentUploadResponse
+ * Response for document upload operations.
+ */
+export interface DocumentUploadResponse {
+  /**
+   * Document Ids
+   * IDs of the uploaded document chunks
+   */
+  document_ids: string[];
+  /**
+   * Document Count
+   * Number of document chunks created
+   */
+  document_count: number;
+  /**
+   * Collection Name
+   * Collection where documents were stored
+   */
+  collection_name: string;
+  /**
+   * Success
+   * Indicates if the upload was successful
+   * @default true
+   */
+  success?: boolean;
+}
+
 /** HTTPValidationError */
 export interface HTTPValidationError {
   /** Detail */
@@ -234,6 +262,38 @@ export interface Message {
    * The content of the message.
    */
   content: string;
+}
+
+/**
+ * OllamaModel
+ * Schema for Ollama model information
+ */
+export interface OllamaModel {
+  /**
+   * Id
+   * Model identifier(format: ollama:{model_name})
+   */
+  id: string;
+  /**
+   * Name
+   * Model name
+   */
+  name: string;
+  /**
+   * Size
+   * Model size in bytes
+   */
+  size: any;
+  /**
+   * Modified At
+   * Last modified date of the model
+   */
+  modified_at?: string | null;
+  /**
+   * Description
+   * Description of the model
+   */
+  description?: string | null;
 }
 
 /**
@@ -535,7 +595,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request POST:/api/rag/documents/upload
      */
     uploadDocumentsApiRagDocumentsUploadPost: (data: DocumentUploadRequest, params: RequestParams = {}) =>
-      this.request<string[], HTTPValidationError>({
+      this.request<DocumentUploadResponse, HTTPValidationError>({
         path: `/api/rag/documents/upload`,
         method: "POST",
         body: data,
@@ -556,7 +616,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       data: BodyUploadFileApiRagDocumentsUploadFilePost,
       params: RequestParams = {},
     ) =>
-      this.request<string[], HTTPValidationError>({
+      this.request<DocumentUploadResponse, HTTPValidationError>({
         path: `/api/rag/documents/upload-file`,
         method: "POST",
         body: data,
@@ -691,6 +751,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listCollectionsApiRagCollectionsGet: (params: RequestParams = {}) =>
       this.request<string[], any>({
         path: `/api/rag/collections`,
+        method: "GET",
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * @description Fetch all available models from Ollama
+     *
+     * @tags models
+     * @name ListAvailableModelsApiModelsGet
+     * @summary List Available Models
+     * @request GET:/api/models/
+     */
+    listAvailableModelsApiModelsGet: (params: RequestParams = {}) =>
+      this.request<OllamaModel[], any>({
+        path: `/api/models/`,
         method: "GET",
         format: "json",
         ...params,

@@ -2210,3 +2210,573 @@ pip install python-multipart
 2025-04-09 23:08:27 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
 2025-04-09 23:08:27 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
 2025-04-09 23:08:27 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 09:53:30 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 09:53:30 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 09:53:30 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 09:53:30 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 09:53:30 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 09:53:30 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 09:53:35 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f778fad3cd198770d62bc0, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 09:53:35 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f778fad3cd198770d62bc0, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 09:53:35 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 09:53:35 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 09:53:35 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 09:53:35 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 09:53:35 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 09:53:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 09:53:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 09:53:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 09:53:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 09:53:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 09:53:37 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 09:53:42 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7790111d4ce1d6ea3b680, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 09:53:42 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7790111d4ce1d6ea3b680, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 09:53:42 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 09:53:42 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 09:53:42 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 09:53:42 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 09:53:42 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 10:27:51 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 10:27:51 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 10:27:51 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 10:27:51 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Hellooo can you hear me?...
+2025-04-10 10:27:51 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 10:27:51 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-04-10 10:27:55 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Hellooo can you hear me?...
+2025-04-10 10:27:55 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Hellooo can you hear me?...
+2025-04-10 10:27:55 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 10:27:55 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 10:54:00 | INFO | app.services.agent_service:67 | Detected translation task, routing to translation model
+2025-04-10 10:54:00 | INFO | app.services.agent_service:130 | Processing request with model: ollama:lauchacarro/qwen2.5-translator
+2025-04-10 10:54:00 | INFO | app.services.agent_service:147 | Using task type: TRANSLATION, temperature: 0.7, max_tokens: 1000
+2025-04-10 10:54:00 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 10:54:00 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Translate to English:...
+2025-04-10 10:54:00 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 10:54:03 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Translate to English:...
+2025-04-10 10:54:03 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Translate to English:...
+2025-04-10 10:54:03 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 10:54:03 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 10:54:11 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 10:54:11 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 10:54:11 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 10:54:11 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: [01:50] Laffey (sleepinglaffey): えちえちなアダルトSIM探検から帰...
+2025-04-10 10:54:11 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 10:54:13 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: [01:50] Laffey (sleepinglaffey): えちえちなアダルトSIM探検から帰...
+2025-04-10 10:54:13 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: [01:50] Laffey (sleepinglaffey): えちえちなアダルトSIM探検から帰...
+2025-04-10 10:54:13 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 10:54:13 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 10:55:34 | INFO | app.services.agent_service:67 | Detected translation task, routing to translation model
+2025-04-10 10:55:34 | INFO | app.services.agent_service:130 | Processing request with model: ollama:lauchacarro/qwen2.5-translator
+2025-04-10 10:55:34 | INFO | app.services.agent_service:147 | Using task type: TRANSLATION, temperature: 0.7, max_tokens: 1000
+2025-04-10 10:55:34 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 10:55:34 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Translate this to English [01:50] Laffey (sleeping...
+2025-04-10 10:55:34 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 10:55:36 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Translate this to English [01:50] Laffey (sleeping...
+2025-04-10 10:55:36 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Translate this to English [01:50] Laffey (sleeping...
+2025-04-10 10:55:36 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 10:55:36 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 11:01:17 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:01:17 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:02:06 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:02:06 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:06:16 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:06:16 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:06:26 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:06:26 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:06:56 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:06:56 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:07:18 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:07:18 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:07:33 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:07:33 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:07:33 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 11:07:33 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Now can you tell me what the weather is like?...
+2025-04-10 11:07:33 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 11:07:35 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Now can you tell me what the weather is like?...
+2025-04-10 11:07:35 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Now can you tell me what the weather is like?...
+2025-04-10 11:07:35 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 11:07:35 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 11:07:52 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:07:52 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:08:35 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:08:35 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:08:54 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:08:54 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:17:38 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:17:38 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:17:38 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:17:38 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:17:38 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:17:38 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:17:43 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78cb203748bf3ad46e6c2, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:17:43 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78cb203748bf3ad46e6c2, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:17:43 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:17:44 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:17:44 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:17:44 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:17:44 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:19:16 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:19:16 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:19:20 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:19:20 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:19:20 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:19:20 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:19:20 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:19:20 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:19:30 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:19:30 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:19:30 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:19:30 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:19:30 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:19:30 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:19:35 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78d22b0bfe6804b0b8892, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:19:35 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78d22b0bfe6804b0b8892, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:19:35 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:19:35 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:19:35 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:19:35 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:19:35 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:19:37 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:19:37 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:19:37 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:19:37 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:19:37 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:19:37 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:19:42 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78d293fadd844e49c3127, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:19:42 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78d293fadd844e49c3127, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:19:42 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:19:42 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:19:42 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:19:42 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:19:42 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:19:46 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:19:46 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:26:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:26:43 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:26:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:26:43 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:26:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:26:47 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:27:01 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:27:01 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:27:15 | INFO | app.services.agent_service:67 | Detected translation task, routing to translation model
+2025-04-10 11:27:15 | INFO | app.services.agent_service:130 | Processing request with model: ollama:lauchacarro/qwen2.5-translator
+2025-04-10 11:27:15 | INFO | app.services.agent_service:147 | Using task type: TRANSLATION, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:27:25 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:27:25 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:27:39 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:27:39 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:27:58 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:27:58 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:28:05 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:28:05 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:28:16 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:28:16 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:28:23 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:28:23 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:28:32 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:28:32 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:28:44 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:28:44 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:28:56 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:28:56 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:29:16 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:29:16 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:29:16 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:29:16 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:29:16 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:29:16 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:29:21 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78f6c4787abd9012972fe, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:29:21 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f78f6c4787abd9012972fe, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:29:21 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:29:22 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:29:22 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:29:22 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:29:22 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:31:48 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:31:48 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:31:48 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:31:48 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:31:48 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:31:48 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:31:53 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7900499d6c6c49c5d68f1, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:31:53 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7900499d6c6c49c5d68f1, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:31:53 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:31:53 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:31:53 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:31:53 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:31:53 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:31:55 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:31:55 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:31:55 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:31:55 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:31:55 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:31:55 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:32:00 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7900b012bd24d0450f11b, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:32:00 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7900b012bd24d0450f11b, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:32:00 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:32:00 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:32:00 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:32:00 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:32:00 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:32:16 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:32:16 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:32:16 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:32:16 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:32:35 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:32:35 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:32:53 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:32:53 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:33:11 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:33:11 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:38:07 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:38:07 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:38:07 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:38:07 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:38:07 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:38:07 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:38:12 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7917f08127f656e696976, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:38:12 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7917f08127f656e696976, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:38:12 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:38:12 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:38:12 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:38:12 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:38:12 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:41:11 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:41:11 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:41:11 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:41:11 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:41:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:41:13 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:41:13 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:41:13 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:41:13 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:41:13 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:41:19 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:41:19 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:41:19 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:41:19 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:41:19 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:41:19 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:41:25 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7923f475c5a4e8bb9d292, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:41:25 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7923f475c5a4e8bb9d292, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:41:25 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:41:25 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:41:25 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:41:25 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:41:25 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:41:26 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:41:26 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:41:26 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:41:26 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:41:26 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:41:26 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:41:32 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f79246b92ee05d7da665ae, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:41:32 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f79246b92ee05d7da665ae, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:41:32 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:41:32 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:41:32 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:41:32 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:41:32 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:41:36 | INFO | app.services.agent_service:132 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:41:36 | INFO | app.services.agent_service:149 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:41:49 | INFO | app.services.agent_service:132 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:41:49 | INFO | app.services.agent_service:149 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:42:00 | INFO | app.services.agent_service:132 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:42:00 | INFO | app.services.agent_service:149 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:42:12 | INFO | app.services.agent_service:132 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:42:12 | INFO | app.services.agent_service:149 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:42:20 | INFO | app.services.agent_service:132 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:42:20 | INFO | app.services.agent_service:149 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:53:40 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:53:40 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:53:40 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 11:53:40 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 11:53:42 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 11:53:42 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 11:53:42 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 11:53:42 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 11:53:42 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 11:53:42 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 11:53:47 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f795263e5283b7a9d94224, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:53:47 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f795263e5283b7a9d94224, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 11:53:47 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 11:53:47 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 11:53:47 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 11:53:47 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 11:53:47 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 11:53:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:53:47 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:54:03 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:54:03 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:54:26 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:54:26 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:54:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:54:47 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:55:08 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:55:08 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:55:15 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:55:15 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:55:20 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:55:20 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:56:13 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:56:13 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:56:28 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:56:28 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:56:28 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 11:56:28 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Now whats the weather like?...
+2025-04-10 11:56:28 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 11:56:28 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-04-10 11:56:31 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Now whats the weather like?...
+2025-04-10 11:56:31 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Now whats the weather like?...
+2025-04-10 11:56:31 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 11:56:31 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 11:56:51 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 11:56:51 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 11:56:51 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-04-10 11:56:51 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Whats the weather in the test.txt?...
+2025-04-10 11:56:51 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 11:56:53 | INFO | app.services.rag.vector_store:151 | Found 2 documents for query: Whats the weather in the test.txt?...
+2025-04-10 11:56:53 | INFO | app.services.rag.retriever:60 | Retrieved 2 documents for query: Whats the weather in the test.txt?...
+2025-04-10 11:56:53 | INFO | app.services.rag_service:214 | Retrieved 2 documents
+2025-04-10 11:56:53 | INFO | app.services.agent_service:176 | Added 2 documents as context
+2025-04-10 12:25:08 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmptaxzbhik.pdf
+2025-04-10 12:25:08 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-10 12:25:08 | INFO | app.services.rag_service:134 | Text Split into 5 chunks
+2025-04-10 12:25:08 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 3678a66e-4479-49ab-b24f-7d2e9e9b8e04
+2025-04-10 12:25:08 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 49dd7e2d-ce9e-4ca6-baba-e836842989be
+2025-04-10 12:25:08 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 127a9be1-388c-40b6-8d06-07231f35dfb0
+2025-04-10 12:25:08 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 59197119-8f1e-42cb-a1cf-5c0f8d5f9e18
+2025-04-10 12:25:08 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 49229dcd-5750-47df-81e3-ba492edafc57
+2025-04-10 12:25:08 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 12:25:11 | INFO | app.services.rag.vector_store:89 | Creating new FAISS index
+2025-04-10 12:25:11 | INFO | app.services.rag.vector_store:120 | Added 5 documents to FAISS index
+2025-04-10 12:25:11 | INFO | app.services.rag_service:176 | Added 5 documents to vector store collection: resume
+2025-04-10 12:25:21 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:25:21 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 12:25:21 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:25:21 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 12:25:33 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-04-10 12:25:33 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-04-10 12:25:33 | INFO | app.services.agent_service:155 | Retrieving relevant documents from resume collection
+2025-04-10 12:25:33 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Tell me a bit about Brandon Gibbs...
+2025-04-10 12:25:33 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 12:25:33 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 12:25:33 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\resume
+2025-04-10 12:25:35 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Tell me a bit about Brandon Gibbs...
+2025-04-10 12:25:35 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Tell me a bit about Brandon Gibbs...
+2025-04-10 12:25:35 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-04-10 12:25:35 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-04-10 12:26:49 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-04-10 12:26:49 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-04-10 12:26:49 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-10 12:26:49 | INFO | app.services.agent_service:155 | Retrieving relevant documents from resume collection
+2025-04-10 12:26:49 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: What kind of programming languages does he know?...
+2025-04-10 12:26:49 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 12:26:49 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 12:26:49 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\resume
+2025-04-10 12:26:51 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: What kind of programming languages does he know?...
+2025-04-10 12:26:51 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: What kind of programming languages does he know?...
+2025-04-10 12:26:51 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-04-10 12:26:51 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-04-10 12:27:33 | INFO | app.services.rag_service:317 | Deleting collection: resume
+2025-04-10 12:27:33 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 12:27:33 | INFO | app.services.rag.vector_store:173 | Deleted FAISS collection: resume
+2025-04-10 12:27:35 | INFO | app.services.rag_service:317 | Deleting collection: resume
+2025-04-10 12:27:35 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 12:27:35 | INFO | app.services.rag.vector_store:173 | Deleted FAISS collection: resume
+2025-04-10 12:27:44 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:27:44 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:28:52 | INFO | app.services.rag.document_store:179 | Listed 6 documents
+2025-04-10 12:29:10 | INFO | app.services.rag.document_store:179 | Listed 1 documents
+2025-04-10 12:29:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:29:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:29:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:29:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:50:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:50:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:50:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:50:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:50:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:50:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:50:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:50:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:53:07 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:54:52 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:54:52 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:55:13 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:55:13 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:55:30 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:55:30 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 12:56:06 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 12:56:06 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:03:45 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 13:03:45 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 13:03:45 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 13:03:45 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 13:03:45 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 13:03:45 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 13:03:50 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a591951a241a5d6186e3, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:03:50 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a591951a241a5d6186e3, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:03:50 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 13:03:51 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 13:03:51 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 13:03:51 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 13:03:51 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 13:03:52 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 13:03:52 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 13:03:52 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 13:03:52 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 13:03:52 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 13:03:52 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 13:03:57 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a5984d2a8a172143d83e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:03:57 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a5984d2a8a172143d83e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:03:57 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 13:03:58 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 13:03:58 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 13:03:58 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 13:03:58 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 13:05:58 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 13:05:58 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 13:05:58 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 13:05:58 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 13:05:58 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 13:05:58 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 13:06:03 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a6164574e442fd31eae6, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:06:03 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a6164574e442fd31eae6, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:06:03 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 13:06:03 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 13:06:03 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 13:06:03 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 13:06:03 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 13:06:05 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-04-10 13:06:05 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-04-10 13:06:05 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-04-10 13:06:05 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-04-10 13:06:05 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-04-10 13:06:05 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-04-10 13:06:10 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a61d83ab4c859d88bc01, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:06:10 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 67f7a61d83ab4c859d88bc01, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-04-10 13:06:10 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-04-10 13:06:10 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-04-10 13:06:10 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-04-10 13:06:10 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-04-10 13:06:10 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-04-10 13:07:06 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmp8sp4wi5k.txt
+2025-04-10 13:07:06 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-10 13:07:06 | INFO | app.services.rag_service:134 | Text Split into 1 chunks
+2025-04-10 13:07:06 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 350fc5a3-eacf-42e4-8cfe-152339a17c41
+2025-04-10 13:07:06 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-04-10 13:07:10 | INFO | app.services.rag.vector_store:120 | Added 1 documents to FAISS index
+2025-04-10 13:07:10 | INFO | app.services.rag_service:176 | Added 1 documents to vector store collection: default
+2025-04-10 13:11:56 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:11:56 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:13:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:14:00 | INFO | app.services.rag_service:84 | Processing file: C:\Users\Taja\AppData\Local\Temp\tmpxlkrd10g.pdf
+2025-04-10 13:14:00 | INFO | app.services.rag_service:123 | Processing text content with chunk size: 1000
+2025-04-10 13:14:00 | INFO | app.services.rag_service:134 | Text Split into 5 chunks
+2025-04-10 13:14:00 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 828caa3e-ef75-4610-8437-cd9e252863ac
+2025-04-10 13:14:00 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 64ce4f58-94ab-405a-8431-f130cad5f691
+2025-04-10 13:14:00 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 883ef23b-bc11-405a-afcd-473eb2317d38
+2025-04-10 13:14:00 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 1e4bd28a-1397-4226-9b4d-689448cc29d6
+2025-04-10 13:14:00 | INFO | app.services.rag.document_store:74 | Stored doc with ID: 47cbf1d6-54fe-4d7a-8f7a-e99690ef7b7b
+2025-04-10 13:14:00 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 13:14:02 | INFO | app.services.rag.vector_store:89 | Creating new FAISS index
+2025-04-10 13:14:02 | INFO | app.services.rag.vector_store:120 | Added 5 documents to FAISS index
+2025-04-10 13:14:02 | INFO | app.services.rag_service:176 | Added 5 documents to vector store collection: resume
+2025-04-10 13:14:02 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:14:02 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 13:14:02 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:14:02 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:14:25 | INFO | app.services.rag_service:352 | Found 2 collections
+2025-04-10 13:14:35 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-04-10 13:14:35 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-04-10 13:14:35 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-04-10 13:14:35 | INFO | app.services.agent_service:155 | Retrieving relevant documents from resume collection
+2025-04-10 13:14:35 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: what programming languages does brandon know?...
+2025-04-10 13:14:35 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 13:14:35 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-04-10 13:14:35 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\resume
+2025-04-10 13:14:37 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: what programming languages does brandon know?...
+2025-04-10 13:14:37 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: what programming languages does brandon know?...
+2025-04-10 13:14:37 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-04-10 13:14:37 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-04-10 13:15:08 | INFO | app.services.rag_service:317 | Deleting collection: resume
+2025-04-10 13:15:08 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 13:15:08 | INFO | app.services.rag.vector_store:173 | Deleted FAISS collection: resume
+2025-04-10 13:15:09 | INFO | app.services.rag_service:317 | Deleting collection: resume
+2025-04-10 13:15:09 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: resume
+2025-04-10 13:15:09 | INFO | app.services.rag.vector_store:173 | Deleted FAISS collection: resume
+2025-04-10 13:15:13 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:13 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:15:15 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:15 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:15:16 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:16 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:15:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:17:04 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:17:04 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:05 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:05 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:18 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:33 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:33 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:19:38 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:19:38 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:20:27 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:20:28 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:20:28 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:20:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:20:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:23:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-04-10 13:25:37 | INFO | app.services.rag_service:341 | Listing all collections
+2025-04-10 13:25:37 | INFO | app.services.rag_service:352 | Found 1 collections

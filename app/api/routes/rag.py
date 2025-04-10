@@ -8,14 +8,15 @@ from app.models.rag_schemas import (
     DocumentUploadRequest,
     DocumentChunk,
     RAGRequest,
-    RAGResponse
+    RAGResponse,
+    DocumentUploadResponse
 )
 from app.services.rag_service import RAGService
 from app.api.dependencies import get_rag_service
 
 router = APIRouter(tags=["rag"])
 
-@router.post("/documents/upload", response_model=List[str])
+@router.post("/documents/upload", response_model=DocumentUploadResponse)
 async def upload_documents(
     document: DocumentUploadRequest,
     rag_service: RAGService = Depends(get_rag_service)
@@ -28,14 +29,20 @@ async def upload_documents(
             text=document.content,
             metadata={} if document.metadata is None else document.metadata.dict(),
             chunk_size=document.chunk_size,
-            chunk_overlap=document.chunk_overlap
+            chunk_overlap=document.chunk_overlap,
+            collection_name=document.collection_name
         )
-        return document_ids
+        return DocumentUploadResponse(
+            document_ids=document_ids,
+            document_count=len(document_ids),
+            collection_name=document.collection_name,
+            success=True
+        )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing document: {str(e)}")
     
 
-@router.post("/documents/upload-file", response_model=List[str])
+@router.post("/documents/upload-file", response_model=DocumentUploadResponse)
 async def upload_file(
     file: UploadFile = File(...),
     collection_name: str = Form("default"),
@@ -63,8 +70,13 @@ async def upload_file(
 
         # Clean up temp file
         os.unlink(temp_file_path)
-                  
-        return document_ids
+        
+        return DocumentUploadResponse(
+            document_ids=document_ids, 
+            document_count=len(document_ids),
+            collection_name=collection_name,
+            success=True
+        )
     except Exception as e:
         #clean up temp file in case of error
         if os.path.exists(temp_file_path):

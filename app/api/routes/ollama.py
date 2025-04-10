@@ -2,13 +2,14 @@ import httpx
 from fastapi import APIRouter, HTTPException
 from app.config import settings
 from typing import List, Dict, Any
+from app.models.schemas import OllamaModel
 
 router = APIRouter(
     prefix="/models",
     tags=["models"],
 )
 
-@router.get("/", response_model=List[Dict[str, Any]])
+@router.get("/", response_model=List[OllamaModel])
 async def list_available_models():
     """Fetch all available models from Ollama"""
     try:
@@ -18,13 +19,13 @@ async def list_available_models():
                 models = response.json().get("models", [])
                 # Format models for frontend display
                 formatted_models = [
-                    {
-                        "id": f"ollama:{model['name']}",
-                        "name": model['name'],
-                        "size": model.get('size', 'Unknown'),
-                        "modified_at": model.get('modified_at', ''),
-                        "description": model.get('details', {}).get('description', '')
-                    }
+                    OllamaModel(
+                        id=f"ollama:{model['name']}",
+                        name=model['name'],
+                        size=model.get('size', 'Unknown'),
+                        modified_at=model.get('modified_at', ''),
+                        description=model.get('details', {}).get('description', '')
+                    )
                     for model in models
                 ]
                 return formatted_models

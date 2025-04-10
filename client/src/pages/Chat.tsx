@@ -1,5 +1,5 @@
 import { ChatWindow } from '../components/chat';
-import '../components/chat/chat.css'; // Import the CSS
+import '../components/chat/chat.css';
 
 export function ChatPage() {
   return (

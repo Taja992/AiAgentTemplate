@@ -32,6 +32,9 @@ node_modules/
 dist/
 dist-ssr/
 
+# Uploaded Data
+data/
+
 # Logs
 logs/
 *.log

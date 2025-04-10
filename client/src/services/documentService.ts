@@ -1,5 +1,11 @@
 import { apiClient } from './apiClient';
-import type { DocumentUploadRequest, RAGResponse, DocumentChunk } from './api/api';
+import type { 
+  DocumentUploadRequest, 
+  RAGResponse, 
+  DocumentChunk, 
+  DocumentUploadResponse,
+  BodyUploadFileApiRagDocumentsUploadFilePost 
+} from './api/api';
 
 /**
  * Document service for managing documents and RAG functionality
@@ -9,14 +15,30 @@ export const documentService = {
    * Upload a document for processing and indexing
    * 
    * @param document Document details and content to upload
-   * @returns Array of document chunk IDs
+   * @returns DocumentUploadResponse with document IDs and metadata
    */
-  async uploadDocument(document: DocumentUploadRequest): Promise<string[]> {
+  async uploadDocument(document: DocumentUploadRequest): Promise<DocumentUploadResponse> {
     try {
       const response = await apiClient.api.uploadDocumentsApiRagDocumentsUploadPost(document);
       return response.data;
     } catch (error) {
       console.error('Document upload error:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Upload a file document for processing and indexing
+   * 
+   * @param fileData File data including the file and metadata
+   * @returns DocumentUploadResponse with document IDs and metadata
+   */
+  async uploadFile(fileData: BodyUploadFileApiRagDocumentsUploadFilePost): Promise<DocumentUploadResponse> {
+    try {
+      const response = await apiClient.api.uploadFileApiRagDocumentsUploadFilePost(fileData);
+      return response.data;
+    } catch (error) {
+      console.error('File upload error:', error);
       throw error;
     }
   },

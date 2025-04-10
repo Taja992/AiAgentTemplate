@@ -54,3 +54,11 @@ class AgentResponse(BaseModel):
     
     # C# equivalent: public Dictionary<string, object> Usage { get; set; } = new Dictionary<string, object>();
     usage: Dict[str, Any] = Field(default_factory=dict, description="Token usage information")
+
+class OllamaModel(BaseModel):
+    """Schema for Ollama model information"""
+    id: str = Field(..., description="Model identifier(format: ollama:{model_name})")
+    name: str = Field(..., description="Model name")
+    size: Any = Field(..., description="Model size in bytes")
+    modified_at: Optional[str] = Field(None, description="Last modified date of the model")
+    description: Optional[str] = Field(None, description="Description of the model")

@@ -46,6 +46,23 @@ class DocumentUploadRequest(BaseModel):
             }
         }
 
+class DocumentUploadResponse(BaseModel):
+    """Response for document upload operations."""
+    document_ids: List[str] = Field(..., description="IDs of the uploaded document chunks")
+    document_count: int = Field(..., description="Number of document chunks created")
+    collection_name: str = Field(..., description='Collection where documents were stored')
+    success: bool = Field(True, description="Indicates if the upload was successful")
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "document_ids": ["doc123", "doc124", "doc125"],
+                "document_count": 3,
+                "collection_name": "research_papers",
+                "success": True
+            }
+        }
+
 class RAGRequest(BaseModel):
     """Request for a RAG-augmented response."""
     query: str = Field(..., description="User query or retrieval request")

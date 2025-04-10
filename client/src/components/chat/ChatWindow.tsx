@@ -1,23 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MessageList } from './MessageList';
 import { MessageInput } from './MessageInput';
-import { Message, chatService } from '../../services';
+import { Message, chatService, documentService } from '../../services';
 
 interface ChatWindowProps {
   initialMessages?: Message[];
-  useRag?: boolean;
 }
 
 export function ChatWindow({ 
-  initialMessages = [], 
-  useRag = true 
+  initialMessages = []
 }: ChatWindowProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [collections, setCollections] = useState<string[]>([]);
 
-  const handleSendMessage = async (content: string) => {
-    // Add user message to the conversation
+  // Fetch available collections on component mount
+  useEffect(() => {
+    const fetchCollections = async () => {
+      try {
+        const collectionsData = await documentService.getCollections();
+        // Sort collections alphabetically
+        setCollections(collectionsData.sort());
+      } catch (err) {
+        console.error('Failed to fetch collections:', err);
+        setError('Failed to load document collections');
+      }
+    };
+    
+    fetchCollections();
+  }, []);
+
+  const handleSendMessage = async (
+    content: string, 
+    options: { skipMemory: boolean, ragCollection: string | null }
+  ) => {
+    // Add user message to the conversation UI
     const userMessage: Message = { role: 'user', content };
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
@@ -25,12 +43,20 @@ export function ChatWindow({
     setError(null);
     
     try {
-      // Call the AI service
-      const response = await chatService.chat(updatedMessages, { 
-        use_rag: useRag 
+      // When skipMemory is true, only send the current message
+      // When false, send the entire conversation history
+      const messagesToSend = options.skipMemory 
+        ? [userMessage]  // Just send the current message for stateless requests
+        : updatedMessages; // Send full history for normal requests
+      
+      // Call the AI service with the appropriate messages
+      const response = await chatService.chat(messagesToSend, { 
+        skip_memory: options.skipMemory,
+        use_rag: !!options.ragCollection,
+        rag_collection: options.ragCollection || undefined
       });
       
-      // Add AI response to conversation
+      // Add AI response to conversation UI (always maintain visual history)
       const assistantMessage: Message = { 
         role: 'assistant', 
         content: response.response 
@@ -49,16 +75,6 @@ export function ChatWindow({
     <div className="chat-window">
       <div className="chat-header">
         <h2>AI Assistant</h2>
-        <div className="chat-options">
-          <label>
-            <input 
-              type="checkbox" 
-              checked={useRag} 
-              onChange={(e) => console.log('RAG toggled:', e.target.checked)} 
-            />
-            Use Knowledge Base
-          </label>
-        </div>
       </div>
       
       <div className="chat-messages">
@@ -75,6 +91,7 @@ export function ChatWindow({
         <MessageInput 
           onSendMessage={handleSendMessage} 
           isLoading={isLoading} 
+          collections={collections}
         />
       </div>
     </div>

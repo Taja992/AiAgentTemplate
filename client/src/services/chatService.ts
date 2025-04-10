@@ -17,6 +17,7 @@ export const chatService = {
     max_tokens?: number;
     use_rag?: boolean;
     rag_collection?: string;
+    skip_memory?: boolean;
   } = {}): Promise<AgentResponse> {
     try {
       const response = await apiClient.api.chatApiChatPost({
@@ -25,7 +26,8 @@ export const chatService = {
         max_tokens: options.max_tokens ?? 1000
       }, {
         use_rag: options.use_rag ?? true,
-        rag_collection: options.rag_collection ?? 'default'
+        rag_collection: options.rag_collection ?? 'default',
+        skip_memory: options.skip_memory ?? false
       });
       
       return response.data;
