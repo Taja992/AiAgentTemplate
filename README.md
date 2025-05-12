@@ -2,6 +2,34 @@
 
 A flexible, modular API for interacting with various AI models through a unified interface.
 
+# Start-up
+### BackEnd
+```sh
+git clone https://github.com/your-repo/AIAgentTemplate.git
+
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
+python -m app.main
+```
+### Front End
+```sh
+cd .\AIAgentTemplate\client\
+npm install
+npm run dev
+```
+### LLM set up
+This program is capable of easily swapping any models, by default its set to use ollama:gemma3:1b
+for a simple light weight model, in order to run it you will need to use
+```sh
+ollama pull ollama:gemma3:1b
+```
+
+### MongoDB Set up
+```sh
+docker compose up -d
+```
+
 ## Architecture Flow
 
 The AI Agent Template follows a clean, layered architecture with clear separation of concerns:

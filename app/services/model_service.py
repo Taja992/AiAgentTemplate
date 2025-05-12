@@ -54,6 +54,9 @@ class ModelService:
         # CodeLlamachain registration
         self.model_chains["code_llama"] = CodeLlamaChain()
         logger.info("Registered CodeLlamaChain")
+
+        # self.model_chains["customizable"] = CustomizableChain()
+        # logger.info("Registered CustomizableChain")
     
 
         #more chains added here

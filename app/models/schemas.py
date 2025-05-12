@@ -62,3 +62,15 @@ class OllamaModel(BaseModel):
     size: Any = Field(..., description="Model size in bytes")
     modified_at: Optional[str] = Field(None, description="Last modified date of the model")
     description: Optional[str] = Field(None, description="Description of the model")
+
+class ChainConfiguration(BaseModel):
+    """Configuration for a customizable model chains."""
+    system_message: Optional[str] = None
+    parameters: Dict[str, Any] = Field(default_factory=dict)
+    name: Optional[str] = None # To identify the chain configuration
+
+class ChainConfigurationResponse(BaseModel):
+    """Response after updating a chain configuration"""
+    name: str
+    system_message: str
+    parameters: Dict[str, Any] = "Chain configuration updated successfully"

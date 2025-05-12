@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     DEFAULT_MODEL: str = "ollama:gemma3:1b"
     DEFAULT_TEMPERATURE: float = 0.7
     DEFAULT_MAX_TOKENS: int = 1000
+    USE_CUSTOMIZABLE_CHAIN_FOR_ALL_MODELS: bool = True
+
 
     #Special model settings
     TRANSLATION_MODEL: str = "ollama:lauchacarro/qwen2.5-translator"

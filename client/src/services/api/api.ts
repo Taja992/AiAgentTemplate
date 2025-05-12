@@ -95,6 +95,35 @@ export interface BodyUploadFileApiRagDocumentsUploadFilePost {
 }
 
 /**
+ * ChainConfiguration
+ * Configuration for a customizable model chains.
+ */
+export interface ChainConfiguration {
+  /** System Message */
+  system_message?: string | null;
+  /** Parameters */
+  parameters?: object;
+  /** Name */
+  name?: string | null;
+}
+
+/**
+ * ChainConfigurationResponse
+ * Response after updating a chain configuration
+ */
+export interface ChainConfigurationResponse {
+  /** Name */
+  name: string;
+  /** System Message */
+  system_message: string;
+  /**
+   * Parameters
+   * @default "Chain configuration updated successfully"
+   */
+  parameters?: object;
+}
+
+/**
  * DocumentChunk
  * A chunk of text from a document with its metadata.
  */
@@ -760,14 +789,32 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @description Fetch all available models from Ollama
      *
      * @tags models
-     * @name ListAvailableModelsApiModelsGet
+     * @name ListAvailableModelsApiOllamaModelsGet
      * @summary List Available Models
-     * @request GET:/api/models/
+     * @request GET:/api/ollama/models/
      */
-    listAvailableModelsApiModelsGet: (params: RequestParams = {}) =>
+    listAvailableModelsApiOllamaModelsGet: (params: RequestParams = {}) =>
       this.request<OllamaModel[], any>({
-        path: `/api/models/`,
+        path: `/api/ollama/models/`,
         method: "GET",
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * @description Configure a customizable chain with a system message and parameters This gives the user the power to set a custom chain for instructions and parameters for the model.
+     *
+     * @tags chains
+     * @name ConfigureChainApiChainsConfigurePost
+     * @summary Configure Chain
+     * @request POST:/api/chains/configure
+     */
+    configureChainApiChainsConfigurePost: (data: ChainConfiguration, params: RequestParams = {}) =>
+      this.request<ChainConfigurationResponse, HTTPValidationError>({
+        path: `/api/chains/configure`,
+        method: "POST",
+        body: data,
+        type: ContentType.Json,
         format: "json",
         ...params,
       }),

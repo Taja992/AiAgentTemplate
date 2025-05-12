@@ -235,3 +235,18 @@
     border: 1px solid #ffcdd2;
   }
 }
+
+.chat-page h1,
+.chat-page .chat-description {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chat-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.chat-page .chat-description {
+  margin-bottom: 1.5rem;
+}

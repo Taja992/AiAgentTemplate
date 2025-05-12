@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    ports:
+      - "27017:27017"
+    container_name: mongodb
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

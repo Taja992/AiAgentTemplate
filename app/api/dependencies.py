@@ -22,3 +22,7 @@ def get_memory_service():
 def get_rag_service():
     """Dependency for RAG service."""
     return rag_service
+
+def get_model_service():
+    """Dependency for model service."""
+    return model_service
