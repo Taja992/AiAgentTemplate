@@ -65,3 +65,4 @@ logs/app.log
 
 # Data
 data/
+**/CONTENTS.md

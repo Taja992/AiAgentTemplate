@@ -81,6 +81,7 @@ class AgentService:
         use_rag: bool = True,
         rag_collection: str = "default",
         rag_num_results: int = 3,
+        use_customizable_chain: bool = None,
         **additional_params
         ) -> AgentResponse:
 
@@ -113,14 +114,17 @@ class AgentService:
                     break
 
         if self.memory_service and not skip_memory:
-            # Load prior conversation history
-            conversation_history = await self.memory_service.load_recent_messages(conversation_id)
-            # If we have history, prepend it to the current messages (except the last one)
-            if conversation_history and len(conversation_history) > 1:
-                # Remove the most recent message since it's already in 'messages'
-                conversation_history = conversation_history[:-1]
-                messages = conversation_history + messages
-                logger.debug(f"Loaded {len(conversation_history)} messages from memory for conversation {conversation_id}")
+            try:
+                # Load prior conversation history
+                conversation_history = await self.memory_service.load_recent_messages(conversation_id)
+                # If we have history, prepend it to the current messages (except the last one)
+                if conversation_history and len(conversation_history) > 1:
+                    # Remove the most recent message since it's already in 'messages'
+                    conversation_history = conversation_history[:-1]
+                    messages = conversation_history + messages
+                    logger.debug(f"Loaded {len(conversation_history)} messages from memory for conversation {conversation_id}")
+            except Exception as e:
+                logger.error(f"Failed to load conversation History: {str(e)} continue without long term memory")
 
 
         # Auto-select model if none provided
@@ -185,6 +189,7 @@ class AgentService:
             model=model,
             temperature=temperature,
             max_tokens=max_tokens,
+            use_customizable_chain=use_customizable_chain,
             **additional_params
         )
     

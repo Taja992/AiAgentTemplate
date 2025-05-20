@@ -31,14 +31,16 @@ async def configure_chain(
         # Update the chain configuration
         chain.update_configuration(
             system_message=config.system_message,
-            parameters=config.parameters
+            parameters=config.parameters,
+            enabled=config.enabled
         )
 
         # Return the current configuration
         return ChainConfigurationResponse(
             name=chain_name,
             system_message=config.system_message,
-            parameters=config.parameters
+            parameters=config.parameters,
+            enabled=config.enabled
         )
     except HTTPException:
         raise

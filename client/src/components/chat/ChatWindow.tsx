@@ -14,6 +14,7 @@ export function ChatWindow({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [collections, setCollections] = useState<string[]>([]);
+  const [useCustomizableChain, setUseCustomizableChain] = useState<boolean>(false); 
 
   // Fetch available collections on component mount
   useEffect(() => {
@@ -53,7 +54,8 @@ export function ChatWindow({
       const response = await chatService.chat(messagesToSend, { 
         skip_memory: options.skipMemory,
         use_rag: !!options.ragCollection,
-        rag_collection: options.ragCollection || undefined
+        rag_collection: options.ragCollection || undefined,
+        use_customizable_chain: useCustomizableChain // Pass the toggle value
       });
       
       // Add AI response to conversation UI (always maintain visual history)
@@ -71,10 +73,26 @@ export function ChatWindow({
     }
   };
 
+  // Toggle handler for customizable chain
+  const handleToggleCustomizableChain = () => {
+    setUseCustomizableChain(prev => !prev);
+  };
+
   return (
     <div className="chat-window">
       <div className="chat-header">
         <h2>AI Assistant</h2>
+        {/* Add toggle for customizable chain */}
+        <div className="chain-toggle">
+          <label>
+            <input 
+              type="checkbox"
+              checked={useCustomizableChain}
+              onChange={handleToggleCustomizableChain}
+            />
+            Use Customizable Chain
+          </label>
+        </div>
       </div>
       
       <div className="chat-messages">

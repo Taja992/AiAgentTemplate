@@ -18,12 +18,14 @@ export const chatService = {
     use_rag?: boolean;
     rag_collection?: string;
     skip_memory?: boolean;
+    use_customizable_chain?: boolean; // Add this parameter
   } = {}): Promise<AgentResponse> {
     try {
       const response = await apiClient.api.chatApiChatPost({
         messages,
         temperature: options.temperature ?? 0.7,
-        max_tokens: options.max_tokens ?? 1000
+        max_tokens: options.max_tokens ?? 1000,
+        use_customizable_chain: options.use_customizable_chain // Pass it in the request body
       }, {
         use_rag: options.use_rag ?? true,
         rag_collection: options.rag_collection ?? 'default',

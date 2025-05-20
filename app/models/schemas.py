@@ -27,6 +27,9 @@ class AgentRequest(BaseModel):
     
     # C# equivalent: public int MaxTokens { get; set; } = 1000;
     max_tokens: int = Field(1000, description="Maximum number of tokens to generate")
+
+    # Parameter to enable a custom chain
+    use_customizable_chain: Optional[bool] = Field(None, description="Use custom chain or not")
     
     # C# equivalent: public Dictionary<string, object> AdditionalParams { get; set; } = new Dictionary<string, object>();
     # default_factory=dict means "initialize with an empty dictionary"
@@ -68,9 +71,12 @@ class ChainConfiguration(BaseModel):
     system_message: Optional[str] = None
     parameters: Dict[str, Any] = Field(default_factory=dict)
     name: Optional[str] = None # To identify the chain configuration
+    enabled: Optional[bool] = None
 
 class ChainConfigurationResponse(BaseModel):
     """Response after updating a chain configuration"""
     name: str
     system_message: str
-    parameters: Dict[str, Any] = "Chain configuration updated successfully"
+    parameters: Dict[str, Any]
+    enabled: Optional[bool] = None
+    message: str = "Chain configuration updated successfully"

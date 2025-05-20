@@ -2,7 +2,7 @@ from typing import List, Dict, Any, Optional, Union
 from app.models.schemas import Message
 from app.config import settings
 from app.utils.logger import get_logger
-from app.services.chains.model_chains import CodeLlamaChain
+from app.services.chains.model_chains import CodeLlamaChain, CustomizableChain
 import importlib
 
 logger = get_logger(__name__)
@@ -55,8 +55,8 @@ class ModelService:
         self.model_chains["code_llama"] = CodeLlamaChain()
         logger.info("Registered CodeLlamaChain")
 
-        # self.model_chains["customizable"] = CustomizableChain()
-        # logger.info("Registered CustomizableChain")
+        self.model_chains["customizable"] = CustomizableChain()
+        logger.info("Registered CustomizableChain")
     
 
         #more chains added here
@@ -110,6 +110,7 @@ class ModelService:
         model: Optional[str] = None,
         temperature: float = 0.7,
         max_tokens: int = 1000,
+        use_customizable_chain: bool = None,  # Add this parameter
         **additional_params
     ) -> Dict[str, Any]:
         """
@@ -120,6 +121,7 @@ class ModelService:
             model: Name of the model to use (defaults to configured default)
             temperature: Creativity parameter (0-1)
             max_tokens: Maximum number of tokens to generate
+            use_customizable_chain: Override to force use of customizable chain
             additional_params: Any additional model-specific parameters
             
         Returns:
@@ -128,8 +130,28 @@ class ModelService:
         # Use default model if none specified
         model_name = model or settings.DEFAULT_MODEL
 
-        if self._should_use_specialized_chain(model_name):
-            # get the chain here
+        # Override chain selection based on the use_customizable_chain parameter
+        if use_customizable_chain is not None:
+            if use_customizable_chain:
+                # Force using customizable chain
+                chain = self.model_chains.get("customizable")
+                if chain:
+                    logger.info(f"Using customizable chain for model {model_name} (forced)")
+                    
+                    # Generate reply with chain
+                    response = await chain.run(
+                        messages=messages,
+                        model=model_name,
+                        temperature=temperature,
+                        max_tokens=max_tokens,
+                        **additional_params
+                    )
+                    return response
+            else:
+                # Skip all chains - continue with regular handler
+                pass
+        elif self._should_use_specialized_chain(model_name):
+            # Default behavior - use specialized chain if available
             chain = self._get_specialized_chain(model_name)
             logger.info(f"Using specialized chain {chain.__class__.__name__} for model {model_name}")
 
@@ -141,21 +163,15 @@ class ModelService:
                 max_tokens=max_tokens,
                 **additional_params
             )
-
             return response
 
-
-        # Determine which provider to use
+        # Regular model handling (if no chain used or chain was disabled)
         provider = self._get_provider_from_model(model_name)
-        
-        # Get the actual model name (without provider prefix)
         actual_model = self._get_model_name(model_name)
         
-        # Check if we have a handler for this provider
         if provider not in self.model_handlers:
             raise ValueError(f"Unsupported model provider: {provider}")
         
-        # Use the appropriate handler to generate the response
         handler = self.model_handlers[provider]
         
         try:
@@ -169,7 +185,7 @@ class ModelService:
             
             return {
                 "content": response["content"],
-                "model": model_name,  # Return the full model name with provider
+                "model": model_name,
                 "usage": response.get("usage", {})
             }
         except Exception as e:

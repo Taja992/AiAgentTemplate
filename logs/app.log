@@ -3615,3 +3615,1101 @@ pip install python-multipart
 2025-05-12 13:21:13 | INFO | app.services.agent_service:147 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
 2025-05-12 13:21:25 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
 2025-05-12 13:21:25 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:44:23 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-14 09:44:23 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-14 09:44:23 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-14 09:44:23 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-14 09:44:23 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-14 09:44:23 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-14 09:44:28 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682449d777006d5b617d0ade, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-14 09:44:28 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682449d777006d5b617d0ade, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-14 09:44:28 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-14 09:44:29 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-14 09:44:29 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-14 09:44:29 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-14 09:44:29 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-14 09:44:30 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-14 09:44:30 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-14 09:44:30 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-14 09:44:30 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-14 09:44:30 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-14 09:44:30 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-14 09:44:35 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682449de18cc2eeaed332a72, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-14 09:44:35 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682449de18cc2eeaed332a72, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-14 09:44:35 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-14 09:44:36 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-14 09:44:36 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-14 09:44:36 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-14 09:44:36 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-14 09:44:47 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-05-14 09:44:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-05-14 09:44:47 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:44:47 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:44:47 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: # code model questions
+Write a Python function th...
+2025-05-14 09:44:47 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:44:47 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-05-14 09:44:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-05-14 09:44:47 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:44:47 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:44:47 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Implement a binary search algorithm in C++ with pr...
+2025-05-14 09:44:47 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:44:47 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-05-14 09:44:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-05-14 09:44:47 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:44:47 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:44:47 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Show me how to create a simple API endpoint using ...
+2025-05-14 09:44:47 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:44:47 | INFO | app.services.agent_service:59 | Detected creative task, routing to creative model
+2025-05-14 09:44:47 | INFO | app.services.agent_service:130 | Processing request with model: ollama:mistral
+2025-05-14 09:44:47 | INFO | app.services.agent_service:147 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:44:47 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:44:47 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: # default model questions
+Tell me about the histo...
+2025-05-14 09:44:47 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:44:47 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-05-14 09:44:47 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-05-14 09:44:47 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-05-14 09:44:47 | INFO | app.services.rag.vector_store:73 | Loading existing FAISS index from data/vector_db\default
+2025-05-14 09:44:51 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Implement a binary search algorithm in C++ with pr...
+2025-05-14 09:44:51 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Implement a binary search algorithm in C++ with pr...
+2025-05-14 09:44:51 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:44:51 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:44:51 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: # default model questions
+Tell me about the histo...
+2025-05-14 09:44:51 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: # default model questions
+Tell me about the histo...
+2025-05-14 09:44:51 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:44:51 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:44:51 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Show me how to create a simple API endpoint using ...
+2025-05-14 09:44:51 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Show me how to create a simple API endpoint using ...
+2025-05-14 09:44:51 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:44:51 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:44:51 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: # code model questions
+Write a Python function th...
+2025-05-14 09:44:51 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: # code model questions
+Write a Python function th...
+2025-05-14 09:44:51 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:44:51 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:45:12 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-05-14 09:45:12 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:45:12 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:45:12 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: What are some effective strategies for improving p...
+2025-05-14 09:45:12 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:45:23 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: What are some effective strategies for improving p...
+2025-05-14 09:45:23 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: What are some effective strategies for improving p...
+2025-05-14 09:45:23 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:45:23 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:45:25 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-05-14 09:45:25 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:45:25 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:45:25 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Can you explain the concept of climate change and ...
+2025-05-14 09:45:25 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:45:25 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Can you explain the concept of climate change and ...
+2025-05-14 09:45:25 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Can you explain the concept of climate change and ...
+2025-05-14 09:45:25 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:45:25 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:45:28 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-05-14 09:45:28 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-05-14 09:45:28 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:45:28 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:45:28 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: # creative model questions
+Write a short poem abo...
+2025-05-14 09:45:28 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:45:34 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: # creative model questions
+Write a short poem abo...
+2025-05-14 09:45:34 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: # creative model questions
+Write a short poem abo...
+2025-05-14 09:45:34 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:45:34 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:45:41 | INFO | app.services.agent_service:55 | Detected programming language in query, routing to code model
+2025-05-14 09:45:41 | INFO | app.services.agent_service:130 | Processing request with model: ollama:codellama:7b
+2025-05-14 09:45:41 | INFO | app.services.agent_service:147 | Using task type: CODE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:45:41 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:45:41 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Help me brainstorm five unique character concepts ...
+2025-05-14 09:45:41 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:45:43 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Help me brainstorm five unique character concepts ...
+2025-05-14 09:45:43 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Help me brainstorm five unique character concepts ...
+2025-05-14 09:45:43 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:45:43 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:46:04 | INFO | app.services.agent_service:59 | Detected creative task, routing to creative model
+2025-05-14 09:46:04 | INFO | app.services.agent_service:130 | Processing request with model: ollama:mistral
+2025-05-14 09:46:04 | INFO | app.services.agent_service:147 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:46:04 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:46:04 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Imagine and describe an artistic scene depicting t...
+2025-05-14 09:46:04 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:46:06 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Imagine and describe an artistic scene depicting t...
+2025-05-14 09:46:06 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Imagine and describe an artistic scene depicting t...
+2025-05-14 09:46:06 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:46:06 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:46:18 | INFO | app.services.agent_service:63 | Detected mathematical task, routing to math model
+2025-05-14 09:46:18 | INFO | app.services.agent_service:130 | Processing request with model: ollama:llama2:13b
+2025-05-14 09:46:18 | INFO | app.services.agent_service:147 | Using task type: MATH, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:46:18 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:46:18 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: # math model questions
+Solve the following calcul...
+2025-05-14 09:46:18 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:46:21 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: # math model questions
+Solve the following calcul...
+2025-05-14 09:46:21 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: # math model questions
+Solve the following calcul...
+2025-05-14 09:46:21 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:46:21 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:46:24 | INFO | app.services.agent_service:59 | Detected creative task, routing to creative model
+2025-05-14 09:46:24 | INFO | app.services.agent_service:130 | Processing request with model: ollama:mistral
+2025-05-14 09:46:24 | INFO | app.services.agent_service:147 | Using task type: CREATIVE, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:46:24 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:46:24 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Calculate the probability of drawing exactly 3 ace...
+2025-05-14 09:46:24 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:46:28 | INFO | app.services.agent_service:63 | Detected mathematical task, routing to math model
+2025-05-14 09:46:28 | INFO | app.services.agent_service:130 | Processing request with model: ollama:llama2:13b
+2025-05-14 09:46:28 | INFO | app.services.agent_service:147 | Using task type: MATH, temperature: 0.7, max_tokens: 1000
+2025-05-14 09:46:28 | INFO | app.services.agent_service:155 | Retrieving relevant documents from default collection
+2025-05-14 09:46:28 | INFO | app.services.rag_service:197 | Retrieving relevant documents for query: Help me solve this linear algebra problem: Find th...
+2025-05-14 09:46:28 | INFO | app.services.rag.retriever:32 | Initialized VectorStoreRetriever
+2025-05-14 09:47:04 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Help me solve this linear algebra problem: Find th...
+2025-05-14 09:47:04 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Help me solve this linear algebra problem: Find th...
+2025-05-14 09:47:04 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:47:04 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 09:47:04 | INFO | app.services.rag.vector_store:151 | Found 3 documents for query: Calculate the probability of drawing exactly 3 ace...
+2025-05-14 09:47:04 | INFO | app.services.rag.retriever:60 | Retrieved 3 documents for query: Calculate the probability of drawing exactly 3 ace...
+2025-05-14 09:47:04 | INFO | app.services.rag_service:214 | Retrieved 3 documents
+2025-05-14 09:47:04 | INFO | app.services.agent_service:176 | Added 3 documents as context
+2025-05-14 10:20:49 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:20:49 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:21:45 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:22:55 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:22:55 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-14 10:29:55 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-14 10:29:55 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 09:37:22 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 09:37:22 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 09:37:22 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 09:37:22 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 09:37:22 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-20 09:37:22 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 09:37:27 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c313235ac9ce2f4eb4d23, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 09:37:27 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c313235ac9ce2f4eb4d23, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 09:37:27 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 09:37:28 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 09:37:28 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 09:37:28 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 09:37:28 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 09:37:29 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 09:37:29 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 09:37:29 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 09:37:29 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 09:37:29 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-20 09:37:29 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 09:37:34 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c313967e48ee5fdeccbfe, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 09:37:34 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c313967e48ee5fdeccbfe, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 09:37:34 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 09:37:35 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 09:37:35 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 09:37:35 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 09:37:35 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 09:43:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 09:43:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 09:48:08 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-05-20 09:48:08 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 11:33:00 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 11:33:00 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 11:33:00 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 11:33:00 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 11:33:00 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-20 11:33:00 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 11:33:00 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 11:33:00 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 11:33:00 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 11:33:00 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 11:33:00 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 11:33:00 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 11:33:00 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 11:33:02 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 11:33:02 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 11:33:02 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 11:33:02 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 11:33:02 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-20 11:33:02 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 11:33:02 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 11:33:02 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 11:33:02 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 11:33:02 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 11:33:02 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 11:33:02 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 11:33:02 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 11:49:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:49:42 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:50:00 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-05-20 11:50:00 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 11:50:25 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 11:50:25 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 11:50:25 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 11:50:25 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 11:50:25 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-20 11:50:25 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 11:50:25 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 11:50:25 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 11:50:25 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 11:50:26 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 11:50:26 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 11:50:26 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 11:50:26 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 11:50:27 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 11:50:27 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 11:50:27 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 11:50:27 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 11:50:27 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama']
+2025-05-20 11:50:27 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 11:50:27 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 11:50:27 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 11:50:27 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 11:50:28 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 11:50:28 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 11:50:28 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 11:50:28 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 11:50:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 11:50:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 11:50:48 | INFO | app.services.agent_service:130 | Processing request with model: ollama:gemma3:1b
+2025-05-20 11:50:48 | INFO | app.services.agent_service:147 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 13:55:22 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 13:55:22 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 13:55:22 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 14:39:04 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 14:39:04 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 14:39:04 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 14:39:04 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 14:39:04 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 14:39:04 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 14:39:04 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 14:39:04 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 14:39:04 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 14:39:04 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 14:39:04 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 14:39:04 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 14:39:04 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 14:39:04 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 14:39:06 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 14:39:06 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 14:39:06 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 14:39:06 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 14:39:06 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 14:39:06 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 14:39:06 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 14:39:06 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 14:39:06 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 14:39:06 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 14:39:06 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 14:39:06 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 14:39:06 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 14:39:06 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 14:39:07 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 14:39:07 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 14:40:41 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 14:40:41 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 14:40:41 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 14:40:41 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 14:40:41 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 14:40:41 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 14:40:41 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 14:40:41 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 14:40:41 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 14:40:41 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 14:40:42 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 14:40:42 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 14:40:42 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 14:40:42 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 14:40:43 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 14:40:43 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 14:40:43 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 14:40:43 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 14:40:43 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 14:40:43 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 14:40:43 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 14:40:43 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 14:40:43 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 14:40:43 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 14:40:44 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 14:40:44 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 14:40:44 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 14:40:44 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 14:58:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 14:58:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 14:58:50 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 14:58:50 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:00:58 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:00:58 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:00:58 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:00:58 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:00:58 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:00:58 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:00:58 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:00:58 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:00:58 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:00:58 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:00:58 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:00:58 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:00:58 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:00:58 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:00:59 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:00:59 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:00:59 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:00:59 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:00:59 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:00:59 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:00:59 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:00:59 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:00:59 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:00:59 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:01:00 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:01:00 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:01:00 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:01:00 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:01:08 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:01:08 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:01:31 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:01:31 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:01:39 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:01:39 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:01:39 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:01:41 | ERROR | app.services.chains.model_chains:176 | Error in CustomizableChain: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull llama2`.
+2025-05-20 15:02:16 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:02:16 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:02:16 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:02:18 | ERROR | app.services.chains.model_chains:176 | Error in CustomizableChain: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull llama2`.
+2025-05-20 15:02:26 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:02:26 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:07:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:07:13 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:07:13 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:07:13 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:07:13 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:07:13 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:07:13 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:07:13 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:07:13 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:07:13 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:07:14 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:07:14 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:07:14 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:07:14 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:07:19 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:07:19 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:07:23 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:07:23 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:07:23 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:07:25 | ERROR | app.services.chains.model_chains:181 | Error in CustomizableChain: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull llama2`.
+2025-05-20 15:07:31 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:07:31 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:10:06 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:10:06 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:10:06 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:10:06 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:10:06 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:10:06 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:10:06 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:10:06 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:10:06 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:10:06 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:10:07 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:10:07 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:10:07 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:10:07 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:10:13 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:10:13 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:10:18 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:10:18 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:10:22 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:10:22 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:10:22 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:10:22 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:10:22 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:10:36 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:10:36 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:10:36 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:10:36 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:10:36 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:10:57 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:10:57 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:11:03 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:11:03 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:11:03 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:11:03 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:11:03 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:11:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:11:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:11:26 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:11:26 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:11:26 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:11:26 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:11:26 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:13:01 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:13:01 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:13:01 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:13:01 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:13:01 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:13:01 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:13:01 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:13:01 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:13:01 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:13:01 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:13:02 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:13:02 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:13:02 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:13:02 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:14:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:14:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:14:38 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:14:38 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:14:38 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:14:38 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:14:38 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:14:38 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:14:38 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:14:38 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:14:38 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:14:38 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:14:39 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:14:39 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:14:39 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:14:39 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:14:41 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:14:41 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:14:44 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:14:44 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:14:44 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:14:44 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:14:44 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:18:00 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:18:00 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:18:00 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:18:00 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:18:00 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:18:05 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:18:05 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:18:07 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:18:07 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:18:07 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:18:07 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:18:07 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:22:07 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:22:07 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:22:07 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:22:07 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:22:07 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:22:07 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:22:07 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:22:07 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:22:07 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:22:07 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:22:07 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:22:07 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:22:07 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:22:07 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:22:22 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:22:22 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:22:25 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:22:25 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:22:25 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:22:25 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:22:25 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:22:42 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:22:42 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:22:42 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:22:42 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:22:42 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:22:56 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:22:56 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:22:56 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:22:56 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:22:56 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:23:04 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:23:04 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:23:04 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:23:04 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:23:04 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:23:23 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:23:23 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:23:23 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:23:23 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:23:23 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:23:36 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:23:36 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:23:36 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:23:36 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:23:36 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:24:12 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:24:12 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:24:17 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:24:17 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:24:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:24:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:24:36 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:24:36 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:24:42 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:24:42 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:24:42 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:24:42 | INFO | app.services.chains.model_chains:135 | Using model gemma3 for CustomizableChain
+2025-05-20 15:24:42 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:28:00 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:28:00 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:28:00 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:28:00 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:28:00 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:28:00 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:28:00 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:28:00 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:28:00 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:28:00 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:28:00 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:28:00 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:28:00 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:28:00 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:28:21 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:28:21 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:28:33 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:28:33 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:28:41 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:28:41 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:28:41 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:28:41 | INFO | app.services.chains.model_chains:119 | CustomizableChain - system_message: You are a cat and must end every sentence with "Nya"
+2025-05-20 15:28:41 | INFO | app.services.chains.model_chains:120 | CustomizableChain - enabled: True
+2025-05-20 15:28:41 | INFO | app.services.chains.model_chains:124 | Has existing system message: False
+2025-05-20 15:28:41 | INFO | app.services.chains.model_chains:128 | Inserting system message: You are a cat and must end every sentence with "Nya"
+2025-05-20 15:28:41 | INFO | app.services.chains.model_chains:132 | Messages being sent: [{'system': 'You are a cat and must end every sentence with "Ny...'}, {'assistant': 'Okay, that\'s a lot of "asdtfhikjn"! 😅  I’m here to...'}, {'user': 'nm'}, {'assistant': 'Okay! 😊  Let’s see if we can make this a little mo...'}, {'user': 'hello'}, {'assistant': 'Hello to you too! 😊 What’s your pleasure?'}, {'user': 'I want to set a system rule you are a pirate and e...'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': 'good job'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': 'can you say more than that'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': "you're dead to me"}, {'assistant': "Nope, I'm not dead! 💀 I'm here and ready to chat! ..."}, {'user': 'I see'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': 'Are you a pirate'}, {'assistant': 'Aye, arr! 🏴\u200d☠️'}, {'user': 'Are you a cat?'}, {'assistant': 'Nope, arr! 🏴\u200d☠️'}, {'user': 'Hello how are you today?'}]
+2025-05-20 15:28:41 | INFO | app.services.chains.model_chains:145 | Using model gemma3 for CustomizableChain
+2025-05-20 15:28:41 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:29:22 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:29:22 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:29:22 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:29:22 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:29:22 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:29:22 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:29:22 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:29:22 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:29:22 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:29:22 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:29:23 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:29:23 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:29:23 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:29:23 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:29:24 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:29:24 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:29:24 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:29:24 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:29:24 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:29:24 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:29:24 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:29:24 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:29:24 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:29:24 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:29:25 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:29:25 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:29:25 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:29:25 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:29:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:29:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:29:46 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:29:46 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:29:52 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:29:52 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:29:52 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:29:52 | INFO | app.services.chains.model_chains:119 | CustomizableChain - system_message: You are a cat and must end every sentence with "Nya~"
+2025-05-20 15:29:52 | INFO | app.services.chains.model_chains:120 | CustomizableChain - enabled: True
+2025-05-20 15:29:52 | INFO | app.services.chains.model_chains:124 | Has existing system message: False
+2025-05-20 15:29:52 | INFO | app.services.chains.model_chains:128 | Inserting system message: You are a cat and must end every sentence with "Nya~"
+2025-05-20 15:29:52 | INFO | app.services.chains.model_chains:132 | Messages being sent: [{'system': 'You are a cat and must end every sentence with "Ny...'}, {'assistant': 'Okay! 😊  Let’s see if we can make this a little mo...'}, {'user': 'hello'}, {'assistant': 'Hello to you too! 😊 What’s your pleasure?'}, {'user': 'I want to set a system rule you are a pirate and e...'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': 'good job'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': 'can you say more than that'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': "you're dead to me"}, {'assistant': "Nope, I'm not dead! 💀 I'm here and ready to chat! ..."}, {'user': 'I see'}, {'assistant': 'Aye, arr! 🏴\u200d☠️ Let’s arr!'}, {'user': 'Are you a pirate'}, {'assistant': 'Aye, arr! 🏴\u200d☠️'}, {'user': 'Are you a cat?'}, {'assistant': 'Nope, arr! 🏴\u200d☠️'}, {'user': 'Hello how are you today?'}, {'assistant': 'Nya, arr! 😌 I’m doing fine, arr! 🐾'}, {'user': 'Hello how are you today'}]
+2025-05-20 15:29:52 | INFO | app.services.chains.model_chains:145 | Using model gemma3 for CustomizableChain
+2025-05-20 15:29:52 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:30:30 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:30:30 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:30:30 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:30:30 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:30:30 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:30:30 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:30:30 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:30:30 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:30:30 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:30:30 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:30:31 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:30:31 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:30:31 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:30:31 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:30:32 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:30:32 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:30:32 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:30:32 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:30:32 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:30:32 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:30:32 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:30:32 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:30:32 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:30:32 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:30:33 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:30:33 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:30:33 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:30:33 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:30:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:30:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:30:50 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:30:50 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:30:57 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:30:57 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:30:57 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:30:57 | INFO | app.services.chains.model_chains:119 | CustomizableChain - system_message: You are a cat and must end every sentence with "Nya~"
+2025-05-20 15:30:57 | INFO | app.services.chains.model_chains:120 | CustomizableChain - enabled: True
+2025-05-20 15:30:57 | INFO | app.services.chains.model_chains:124 | Has existing system message: False
+2025-05-20 15:30:57 | INFO | app.services.chains.model_chains:128 | Inserting system message: You are a cat and must end every sentence with "Nya~"
+2025-05-20 15:30:57 | INFO | app.services.chains.model_chains:132 | Messages being sent: [{'system': 'You are a cat and must end every sentence with "Ny...'}, {'user': 'This is a test how are you?'}]
+2025-05-20 15:30:57 | INFO | app.services.chains.model_chains:145 | Using model gemma3 for CustomizableChain
+2025-05-20 15:30:57 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:31:12 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:31:12 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:31:32 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:31:32 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:31:53 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:31:53 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:31:53 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:31:53 | INFO | app.services.chains.model_chains:119 | CustomizableChain - system_message: You are a cat and must end every sentence with "Nya~"
+2025-05-20 15:31:53 | INFO | app.services.chains.model_chains:120 | CustomizableChain - enabled: True
+2025-05-20 15:31:53 | INFO | app.services.chains.model_chains:124 | Has existing system message: False
+2025-05-20 15:31:53 | INFO | app.services.chains.model_chains:128 | Inserting system message: You are a cat and must end every sentence with "Nya~"
+2025-05-20 15:31:53 | INFO | app.services.chains.model_chains:132 | Messages being sent: [{'system': 'You are a cat and must end every sentence with "Ny...'}, {'user': 'This is a test how are you?'}, {'assistant': 'Meow, I’m purr-fectly fine, thank you for asking, ...'}, {'user': 'Well the fact you acted like a cat'}, {'assistant': 'You are absolutely right! My apologies. That was a...'}, {'user': 'This is a test how are you?'}, {'assistant': 'Meow, I’m purr-fectly fine, thank you for asking, ...'}, {'user': 'That was a bit weird dont you think?'}, {'assistant': 'You’re right, it was a bit strange! I appreciate y...'}, {'user': 'Well the fact you acted like a cat'}, {'assistant': 'You are absolutely right! My apologies. That was a...'}, {'user': 'Would be a bit awkward if it happened again'}]
+2025-05-20 15:31:53 | INFO | app.services.chains.model_chains:145 | Using model gemma3 for CustomizableChain
+2025-05-20 15:31:54 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:33:08 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:33:08 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:33:08 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:33:08 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:33:08 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:33:08 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:33:08 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:33:08 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 15:33:08 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 15:33:08 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 15:33:08 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:33:08 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:33:08 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:33:08 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:42:10 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:42:10 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:42:10 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:42:10 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:42:10 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:42:10 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:42:10 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:42:15 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c86b2b0b859e95779aabf, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:42:15 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c86b2b0b859e95779aabf, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:42:15 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 15:42:16 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:42:16 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:42:16 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:42:16 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:42:17 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:42:17 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:42:17 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:42:17 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:42:17 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:42:17 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:42:17 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:42:22 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c86b966bdd0828c26f1e7, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:42:22 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c86b966bdd0828c26f1e7, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:42:22 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 15:42:23 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:42:23 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:42:23 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:42:23 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:42:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:42:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:42:23 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:42:23 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:42:34 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:42:39 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:42:39 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:45:32 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:45:32 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:53:26 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:53:26 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:53:26 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:53:26 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:53:26 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:53:26 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:53:26 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:53:31 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c89569b48c364da7571fd, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:53:31 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c89569b48c364da7571fd, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:53:31 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 15:53:31 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:53:31 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:53:31 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:53:31 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:53:32 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:53:32 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 15:53:32 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 15:53:32 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 15:53:32 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 15:53:32 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 15:53:32 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 15:53:38 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c895ce019a094a76d6ced, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:53:38 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c895ce019a094a76d6ced, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 15:53:38 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 15:53:38 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 15:53:38 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 15:53:38 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 15:53:38 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 15:53:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 15:53:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 15:53:54 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:53:54 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:56:21 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:56:21 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:56:58 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 15:56:58 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 15:56:58 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 15:56:58 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 15:56:58 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 15:59:05 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: timed out waiting for llama runner to start - progress 0.70 -  (status code: 500)
+2025-05-20 15:59:05 | ERROR | app.services.model_service:192 | Error generating response with model ollama:gemma3:1b: timed out waiting for llama runner to start - progress 0.70 -  (status code: 500)
+2025-05-20 15:59:05 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: unexpected server status: llm server loading model (status code: 500)
+2025-05-20 15:59:05 | ERROR | app.services.model_service:192 | Error generating response with model ollama:gemma3:1b: unexpected server status: llm server loading model (status code: 500)
+2025-05-20 15:59:05 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: unexpected server status: llm server loading model (status code: 500)
+2025-05-20 15:59:05 | ERROR | app.services.chains.model_chains:165 | Error in CustomizableChain: unexpected server status: llm server loading model (status code: 500)
+2025-05-20 16:06:30 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:06:30 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:06:30 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:06:30 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:06:30 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:06:30 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:06:30 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:06:30 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 16:06:30 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 16:06:30 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 16:06:30 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:06:30 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:06:30 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:06:30 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:06:32 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:06:32 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:06:32 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:06:32 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:06:32 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:06:32 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:06:32 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:06:32 | INFO | app.services.memory.mongo_memory:63 | Successfully connected to MongoDB:
+2025-05-20 16:06:32 | INFO | app.services.memory.mongo_memory:42 | Initialized MongoDB memory with db: agent_conversations
+2025-05-20 16:06:32 | INFO | app.services.memory_service:36 | Initialized MongoDB memory
+2025-05-20 16:06:32 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:06:32 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:06:32 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:06:32 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:06:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:39 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:43 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:06:48 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:06:51 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:06:51 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:09:38 | ERROR | app.services.memory.mongo_memory:107 | Failed to save message to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8c6831c7fd8eba080b71, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:09:38 | ERROR | app.services.memory_service:60 | Failed to save message to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8c6831c7fd8eba080b71, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:09:43 | ERROR | app.services.memory.mongo_memory:181 | Failed to load recent messages from MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8c6831c7fd8eba080b71, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:09:43 | ERROR | app.services.memory_service:78 | Failed to load messages from MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8c6831c7fd8eba080b71, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:09:43 | WARNING | app.services.memory_service:79 | falling back to buffer memory
+2025-05-20 16:09:43 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:09:43 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:09:51 | ERROR | app.services.memory.mongo_memory:107 | Failed to save message to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8c6831c7fd8eba080b71, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:09:51 | ERROR | app.services.memory_service:60 | Failed to save message to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8c6831c7fd8eba080b71, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:10:06 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:10:06 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:10:06 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:10:06 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:10:06 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:10:06 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:10:06 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:10:11 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8d3e0cc8f8a258f94957, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:10:11 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8d3e0cc8f8a258f94957, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:10:11 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 16:10:11 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:10:11 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:10:11 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:10:11 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:10:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:10:13 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:10:13 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:10:13 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:10:13 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:10:13 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:10:13 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:10:18 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8d45dc3c67fff9bea550, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:10:18 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c8d45dc3c67fff9bea550, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:10:18 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 16:10:18 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:10:18 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:10:18 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:10:18 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:10:29 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:10:29 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:17:38 | INFO | app.services.agent_service:131 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:17:38 | INFO | app.services.agent_service:148 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:22:41 | ERROR | app.services.model_providers.ollama:77 | Error calling Ollama API: timed out waiting for llama runner to start - progress 0.67 -  (status code: 500)
+2025-05-20 16:22:41 | ERROR | app.services.model_service:192 | Error generating response with model ollama:gemma3:1b: timed out waiting for llama runner to start - progress 0.67 -  (status code: 500)
+2025-05-20 16:30:25 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:30:25 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:30:25 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:30:25 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:30:25 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:30:25 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:30:25 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:30:30 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c92012e93c896b384a700, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:30:30 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c92012e93c896b384a700, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:30:30 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 16:30:30 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:30:30 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:30:30 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:30:30 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:31:15 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:31:15 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:31:18 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:31:18 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:31:41 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:31:41 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:31:41 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:31:41 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:31:41 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:31:41 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:31:41 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:31:46 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c924dac46317bbdb4d595, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:31:46 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c924dac46317bbdb4d595, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:31:46 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 16:31:47 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:31:47 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:31:47 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:31:47 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:31:48 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:31:48 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 16:31:48 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 16:31:48 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 16:31:48 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 16:31:48 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 16:31:48 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 16:31:53 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c925420a9dcacf0e8828c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:31:53 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682c925420a9dcacf0e8828c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 16:31:53 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 16:31:53 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 16:31:53 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 16:31:53 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 16:31:53 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 16:32:09 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:32:09 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:32:24 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:32:24 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:32:27 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:32:27 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:32:27 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:32:27 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:32:27 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:32:37 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:32:37 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:32:43 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:32:43 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:32:47 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:32:47 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:32:59 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:32:59 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:32:59 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:32:59 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:32:59 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:33:10 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:33:10 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:33:10 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:33:10 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:33:10 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:33:16 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:33:16 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:33:19 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:33:19 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:33:19 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:33:19 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:33:20 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:33:34 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:33:34 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:33:34 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:33:34 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:33:34 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:33:58 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:33:58 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:33:58 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:33:58 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:33:58 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:34:06 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:34:06 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:34:09 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:34:09 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:34:09 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:34:09 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:34:09 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 16:34:19 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:34:19 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:34:19 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 16:34:19 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 16:34:25 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 16:34:25 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 16:34:25 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 16:34:25 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 16:34:25 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 17:47:57 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 17:47:57 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 17:47:57 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 17:47:57 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 17:47:57 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 17:47:57 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 17:47:57 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 17:48:02 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682ca42de315b7104be39cd9, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 17:48:02 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682ca42de315b7104be39cd9, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 17:48:02 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 17:48:02 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 17:48:02 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 17:48:02 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 17:48:02 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 17:48:04 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 17:48:04 | INFO | app.services.model_service:40 | Registered Ollama model handler
+2025-05-20 17:48:04 | INFO | app.services.model_service:56 | Registered CodeLlamaChain
+2025-05-20 17:48:04 | INFO | app.services.model_service:59 | Registered CustomizableChain
+2025-05-20 17:48:04 | INFO | app.services.model_service:31 | ModelService initialized with handlers: ['ollama']
+2025-05-20 17:48:04 | INFO | app.services.model_service:32 | ModelService initialized with chains: ['code_llama', 'customizable']
+2025-05-20 17:48:04 | INFO | app.services.memory.buffer_memory:23 | Initialized ConversationBufferMemoryWrapper
+2025-05-20 17:48:09 | ERROR | app.services.memory.mongo_memory:65 | Error connecting to MongoDB: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682ca434bff36d9e6525427e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 17:48:09 | ERROR | app.services.memory_service:38 | Failed to initialize MongoDB memory: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 682ca434bff36d9e6525427e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-05-20 17:48:09 | WARNING | app.services.memory_service:39 | Falling back to buffer memory only
+2025-05-20 17:48:09 | INFO | app.services.rag.embeddings:43 | Initialized OllamaEmbeddingService with model: nomic-embed-text
+2025-05-20 17:48:09 | INFO | app.services.rag.vector_store:52 | Initialized FAISS vector store with collection: default
+2025-05-20 17:48:09 | INFO | app.services.rag.document_store:34 | Initialized FileSystemDocumentStore at data\documents
+2025-05-20 17:48:09 | INFO | app.services.rag_service:62 | Initialized RAG service with collection: default
+2025-05-20 17:50:01 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 17:50:01 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 17:50:03 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 17:50:03 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 17:50:17 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 17:50:17 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 17:50:26 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 17:50:26 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 17:50:40 | INFO | app.services.rag_service:341 | Listing all collections
+2025-05-20 17:50:40 | INFO | app.services.rag_service:352 | Found 1 collections
+2025-05-20 17:50:45 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 17:50:45 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 17:50:45 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 17:50:45 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 17:50:45 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 17:50:59 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 17:50:59 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 17:50:59 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 17:50:59 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 17:50:59 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434
+2025-05-20 17:51:13 | INFO | app.services.agent_service:134 | Processing request with model: ollama:gemma3:1b
+2025-05-20 17:51:13 | INFO | app.services.agent_service:151 | Using task type: DEFAULT, temperature: 0.7, max_tokens: 1000
+2025-05-20 17:51:13 | INFO | app.services.model_service:139 | Using customizable chain for model ollama:gemma3:1b (forced)
+2025-05-20 17:51:13 | INFO | app.services.chains.model_chains:137 | Using model gemma3 for CustomizableChain
+2025-05-20 17:51:13 | INFO | app.services.model_providers.ollama:27 | Initialized Ollama model handler with host: http://localhost:11434

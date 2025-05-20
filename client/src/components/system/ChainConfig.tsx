@@ -10,6 +10,7 @@ interface ChainConfigProps {
 const ChainConfig: React.FC<ChainConfigProps> = ({ onConfigSuccess, onConfigError }) => {
   const [systemMessage, setSystemMessage] = useState<string>('');
   const [temperature, setTemperature] = useState<number>(0.7);
+  const [enabled, setEnabled] = useState<boolean>(false); // Add state for enabled flag
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +31,8 @@ const ChainConfig: React.FC<ChainConfigProps> = ({ onConfigSuccess, onConfigErro
         parameters: {
           temperature
         },
-        name: "customizable" // Using the default customizable chain
+        name: "customizable", // Using the default customizable chain
+        enabled: enabled // Add the enabled flag
       };
 
       const result = await chainService.configureChain(config);
@@ -71,6 +73,22 @@ const ChainConfig: React.FC<ChainConfigProps> = ({ onConfigSuccess, onConfigErro
         )}
         
         <form onSubmit={handleSubmit}>
+          {/* Add the enabled toggle checkbox */}
+          <div className="chain-config-input-group">
+            <label>
+              <input
+                type="checkbox"
+                checked={enabled}
+                onChange={(e) => setEnabled(e.target.checked)}
+                disabled={isLoading}
+              />
+              Enable Customizable Chain
+            </label>
+            <small className="chain-config-help">
+              When enabled, the system message will be applied to conversations
+            </small>
+          </div>
+          
           <div className="chain-config-input-group">
             <label>System Message:</label>
             <textarea

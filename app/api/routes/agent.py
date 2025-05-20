@@ -36,6 +36,7 @@ async def chat(
             use_rag=use_rag,
             rag_collection=rag_collection,
             rag_num_results=rag_num_results,
+            use_customizable_chain=request.use_customizable_chain,
             **request.additional_params
         )
         return response
